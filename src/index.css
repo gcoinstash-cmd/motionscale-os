@@ -27,18 +27,33 @@
   to { opacity: 1; transform: scale(1); }
 }
 
+/* Base typography scaling for crisp readability across desktop & mobile */
+html {
+  font-size: 18px; /* Boost base font size from standard 16px to 18px (+12.5% global boost) */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f3f4f6;
+  background-color: #070707;
+}
+
 /* Custom scrollbars matching the luxury zen dark color aesthetic */
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
   background: #070707;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1f1f1f;
+  background: #262626;
   border-radius: 99px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2b2b2b;
+  background: #3f3f46;
 }

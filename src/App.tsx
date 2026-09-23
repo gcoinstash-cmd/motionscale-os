@@ -137,108 +137,108 @@ export default function App() {
       <div className="absolute bottom-12 left-12 w-[350px] h-[350px] bg-neutral-950/20 rounded-full blur-[120px] pointer-events-none select-none"></div>
 
       {/* Corporate Left Sidebar Workspace Bounds */}
-      <aside className="w-full md:w-64 bg-neutral-950 border-r border-neutral-900/60 flex flex-col justify-between py-6 px-5 relative z-40 shrink-0 md:min-h-screen">
+      <aside className="w-full md:w-72 bg-neutral-950 border-r border-neutral-900/60 flex flex-col justify-between py-6 px-6 relative z-40 shrink-0 md:min-h-screen">
         
         <div className="space-y-8">
           {/* Elite Branding Line */}
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2.5">
-              <div className="w-7 h-7 bg-white rounded flex items-center justify-center text-black font-semibold">
-                <Command className="w-4 h-4 text-black stroke-[2.5]" />
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-white rounded flex items-center justify-center text-black font-semibold shadow-md">
+                <Command className="w-5 h-5 text-black stroke-[2.5]" />
               </div>
               <div>
-                <span className="text-sm font-sans font-medium text-white tracking-tight">MotionScale</span>
-                <span className="text-[9px] font-mono font-medium text-neutral-500 tracking-[0.12em] block uppercase">Operating OS</span>
+                <span className="text-base font-sans font-semibold text-white tracking-tight">MotionScale</span>
+                <span className="text-xs font-mono font-medium text-neutral-400 tracking-[0.14em] block uppercase">Operating OS</span>
               </div>
             </div>
 
             {/* Mobile menu toggle triggers */}
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
-              className="md:hidden text-neutral-400 hover:text-white"
+              className="md:hidden text-neutral-400 hover:text-white p-1"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <AlignRight className="w-5 h-5 text-neutral-400" />}
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <AlignRight className="w-6 h-6 text-neutral-400" />}
             </button>
           </div>
 
           {/* Navigation Items (Desktop default) */}
-          <nav className={`${mobileMenuOpen ? "block" : "hidden"} md:block space-y-1.5 pt-4 md:pt-0`}>
+          <nav className={`${mobileMenuOpen ? "block" : "hidden"} md:block space-y-2 pt-4 md:pt-0`}>
             
             <button
               onClick={() => { setCurrentTab("dashboard"); setMobileMenuOpen(false); }}
-              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded text-xs font-mono tracking-wide text-left transition-all duration-200 ${currentTab === "dashboard" ? "bg-neutral-900 text-white font-semibold shadow-inner border-l-2 border-white" : "text-neutral-400 hover:text-white hover:bg-neutral-900/30"}`}
+              className={`w-full flex items-center gap-3.5 px-3.5 py-3 rounded text-sm font-mono tracking-wide text-left transition-all duration-200 ${currentTab === "dashboard" ? "bg-neutral-900 text-white font-semibold shadow-inner border-l-2 border-white" : "text-neutral-400 hover:text-white hover:bg-neutral-900/40"}`}
             >
-              <Activity className="w-4 h-4 text-neutral-500" />
+              <Activity className="w-4 h-4 text-neutral-400" />
               <span>COMMAND PANEL</span>
             </button>
 
             <button
               onClick={() => { setCurrentTab("crm"); setMobileMenuOpen(false); }}
-              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded text-xs font-mono tracking-wide text-left transition-all duration-200 ${currentTab === "crm" ? "bg-neutral-900 text-white font-semibold shadow-inner border-l-2 border-white" : "text-neutral-400 hover:text-white hover:bg-neutral-900/30"}`}
+              className={`w-full flex items-center gap-3.5 px-3.5 py-3 rounded text-sm font-mono tracking-wide text-left transition-all duration-200 ${currentTab === "crm" ? "bg-neutral-900 text-white font-semibold shadow-inner border-l-2 border-white" : "text-neutral-400 hover:text-white hover:bg-neutral-900/40"}`}
             >
-              <Users className="w-4 h-4 text-neutral-500" />
+              <Users className="w-4 h-4 text-neutral-400" />
               <span>CLIENT PORTALS</span>
             </button>
 
             <button
               onClick={() => { setCurrentTab("sprints"); setMobileMenuOpen(false); }}
-              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded text-xs font-mono tracking-wide text-left transition-all duration-200 ${currentTab === "sprints" ? "bg-neutral-900 text-white font-semibold shadow-inner border-l-2 border-white" : "text-neutral-400 hover:text-white hover:bg-neutral-900/30"}`}
+              className={`w-full flex items-center gap-3.5 px-3.5 py-3 rounded text-sm font-mono tracking-wide text-left transition-all duration-200 ${currentTab === "sprints" ? "bg-neutral-900 text-white font-semibold shadow-inner border-l-2 border-white" : "text-neutral-400 hover:text-white hover:bg-neutral-900/40"}`}
             >
-              <Layers className="w-4 h-4 text-neutral-500" />
+              <Layers className="w-4 h-4 text-neutral-400" />
               <span>STUDIO PIPELINES</span>
             </button>
 
             <button
               onClick={() => { setCurrentTab("ledger"); setMobileMenuOpen(false); }}
-              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded text-xs font-mono tracking-wide text-left transition-all duration-200 ${currentTab === "ledger" ? "bg-neutral-900 text-white font-semibold shadow-inner border-l-2 border-white" : "text-neutral-400 hover:text-white hover:bg-neutral-900/30"}`}
+              className={`w-full flex items-center gap-3.5 px-3.5 py-3 rounded text-sm font-mono tracking-wide text-left transition-all duration-200 ${currentTab === "ledger" ? "bg-neutral-900 text-white font-semibold shadow-inner border-l-2 border-white" : "text-neutral-400 hover:text-white hover:bg-neutral-900/40"}`}
             >
-              <CreditCard className="w-4 h-4 text-neutral-500" />
+              <CreditCard className="w-4 h-4 text-neutral-400" />
               <span>CREATIVE BILLING</span>
             </button>
 
             <button
               onClick={() => { setCurrentTab("coprocessor"); setMobileMenuOpen(false); }}
-              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded text-xs font-mono tracking-wide text-left transition-all duration-200 ${currentTab === "coprocessor" ? "bg-neutral-900 text-white font-semibold shadow-inner border-l-2 border-white" : "text-neutral-400 hover:text-white hover:bg-neutral-900/30"}`}
+              className={`w-full flex items-center gap-3.5 px-3.5 py-3 rounded text-sm font-mono tracking-wide text-left transition-all duration-200 ${currentTab === "coprocessor" ? "bg-neutral-900 text-white font-semibold shadow-inner border-l-2 border-white" : "text-neutral-400 hover:text-white hover:bg-neutral-900/40"}`}
             >
-              <Sparkles className="w-4 h-4 text-neutral-500" />
+              <Sparkles className="w-4 h-4 text-neutral-400" />
               <span>AI CO-PROCESSOR</span>
             </button>
 
             <button
               onClick={() => { setCurrentTab("client"); setMobileMenuOpen(false); }}
-              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded text-xs font-mono tracking-wide text-left transition-all duration-200 ${currentTab === "client" ? "bg-neutral-900 text-white font-semibold shadow-inner border-l-2 border-white" : "text-neutral-400 hover:text-white hover:bg-neutral-900/30"}`}
+              className={`w-full flex items-center gap-3.5 px-3.5 py-3 rounded text-sm font-mono tracking-wide text-left transition-all duration-200 ${currentTab === "client" ? "bg-neutral-900 text-white font-semibold shadow-inner border-l-2 border-white" : "text-neutral-400 hover:text-white hover:bg-neutral-900/40"}`}
             >
-              <ShieldAlert className="w-4 h-4 text-neutral-500" />
+              <ShieldAlert className="w-4 h-4 text-neutral-400" />
               <span>ASSET ESCROW</span>
             </button>
 
             <button
               onClick={() => { setCurrentTab("sandbox"); setMobileMenuOpen(false); }}
-              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded text-xs font-mono tracking-wide text-left transition-all duration-200 ${currentTab === "sandbox" ? "bg-neutral-900 text-white font-semibold shadow-inner border-l-2 border-white" : "text-neutral-400 hover:text-white hover:bg-neutral-900/30"}`}
+              className={`w-full flex items-center gap-3.5 px-3.5 py-3 rounded text-sm font-mono tracking-wide text-left transition-all duration-200 ${currentTab === "sandbox" ? "bg-neutral-900 text-white font-semibold shadow-inner border-l-2 border-white" : "text-neutral-400 hover:text-white hover:bg-neutral-900/40"}`}
             >
-              <ShieldCheck className="w-4 h-4 text-neutral-500" />
+              <ShieldCheck className="w-4 h-4 text-neutral-400" />
               <span>CLIENT SANDBOX</span>
             </button>
 
             <button
               onClick={() => { setCurrentTab("blueprint"); setMobileMenuOpen(false); }}
-              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded text-xs font-mono tracking-wide text-left transition-all duration-200 ${currentTab === "blueprint" ? "bg-neutral-900 text-white font-semibold shadow-inner border-l-2 border-white" : "text-neutral-400 hover:text-white hover:bg-neutral-900/30"}`}
+              className={`w-full flex items-center gap-3.5 px-3.5 py-3 rounded text-sm font-mono tracking-wide text-left transition-all duration-200 ${currentTab === "blueprint" ? "bg-neutral-900 text-white font-semibold shadow-inner border-l-2 border-white" : "text-neutral-400 hover:text-white hover:bg-neutral-900/40"}`}
             >
-              <Globe className="w-4 h-4 text-neutral-500" />
+              <Globe className="w-4 h-4 text-neutral-400" />
               <span>STUDIO BLUEPRINT</span>
             </button>
 
             <button
               onClick={() => { setCurrentTab("devops"); setMobileMenuOpen(false); }}
-              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded text-xs font-mono tracking-wide text-left transition-all duration-200 ${currentTab === "devops" ? "bg-neutral-900 text-white font-semibold shadow-inner border-l-2 border-white" : "text-neutral-400 hover:text-white hover:bg-neutral-900/30"}`}
+              className={`w-full flex items-center gap-3.5 px-3.5 py-3 rounded text-sm font-mono tracking-wide text-left transition-all duration-200 ${currentTab === "devops" ? "bg-neutral-900 text-white font-semibold shadow-inner border-l-2 border-white" : "text-neutral-400 hover:text-white hover:bg-neutral-900/40"}`}
             >
-              <Cpu className="w-4 h-4 text-neutral-500" />
+              <Cpu className="w-4 h-4 text-neutral-400" />
               <span>DEVOPS HUB</span>
             </button>
 
             <button
               onClick={() => setIsAdminPassModalOpen(true)}
-              className="w-full flex items-center gap-3 px-3 py-2.5 rounded text-xs font-mono tracking-wide text-left transition-all duration-200 text-amber-300 hover:text-amber-200 bg-amber-500/10 border border-amber-500/30 hover:bg-amber-500/20 cursor-pointer"
+              className="w-full flex items-center gap-3.5 px-3.5 py-3 rounded text-sm font-mono font-semibold tracking-wide text-left transition-all duration-200 text-amber-300 hover:text-amber-200 bg-amber-500/10 border border-amber-500/30 hover:bg-amber-500/20 cursor-pointer mt-3"
             >
               <Lock className="w-4 h-4 text-amber-400" />
               <span>[ ADMIN PASS ]</span>
@@ -248,16 +248,16 @@ export default function App() {
         </div>
 
         {/* Footer info: Version control & identity logs */}
-        <div className={`${mobileMenuOpen ? "block" : "hidden"} md:block pt-6 border-t border-neutral-900/80 text-[10px] font-mono text-neutral-500 space-y-1.5`}>
+        <div className={`${mobileMenuOpen ? "block" : "hidden"} md:block pt-6 border-t border-neutral-900/80 text-xs font-mono text-neutral-400 space-y-2`}>
           <div className="flex justify-between">
             <span>OPERATIONAL ROLE:</span>
-            <span className="text-white">COCKPIT MAIN</span>
+            <span className="text-white font-medium">COCKPIT MAIN</span>
           </div>
           <div className="flex justify-between">
             <span>CLIENT CV VALUE:</span>
-            <span className="text-white">${(totalContractBudgets / 1000).toFixed(0)}k</span>
+            <span className="text-white font-semibold">${(totalContractBudgets / 1000).toFixed(0)}k</span>
           </div>
-          <div className="pt-2 text-[9px] text-[#525252] leading-snug">
+          <div className="pt-2 text-[11px] text-neutral-500 leading-normal">
             MotionScale OS Framework v2.0 • Luxury Zen Editorial Edition
           </div>
         </div>
@@ -368,29 +368,29 @@ export default function App() {
             </div>
 
             {/* 1-Click Cheat Code Autofill Pill */}
-            <div className="mb-6 p-4 bg-[#18181E] border border-[#2E2E35]">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider flex items-center">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-400 mr-1.5" />
+            <div className="mb-6 p-5 bg-[#18181E] border border-[#2E2E35] rounded">
+              <div className="flex items-center justify-between mb-2.5">
+                <span className="text-xs font-mono text-zinc-300 uppercase tracking-wider flex items-center font-medium">
+                  <Sparkles className="w-4 h-4 text-amber-400 mr-2" />
                   DEMO CHEAT CODE
                 </span>
-                <span className="text-[10px] font-mono px-2 py-0.5 bg-amber-500/20 text-amber-300 uppercase">
+                <span className="text-xs font-mono px-2.5 py-1 bg-amber-500/20 text-amber-300 uppercase font-semibold rounded">
                   1-Click Fill
                 </span>
               </div>
               <button
                 type="button"
                 onClick={() => setAdminPassInput('motionscale2026')}
-                className="w-full text-left font-mono text-sm text-zinc-100 hover:text-amber-300 bg-[#0E0E12] px-3 py-2 border border-zinc-700 hover:border-amber-500/50 transition-all flex items-center justify-between cursor-pointer"
+                className="w-full text-left font-mono text-base text-zinc-100 hover:text-amber-300 bg-[#0E0E12] px-4 py-3 border border-zinc-700 hover:border-amber-500/50 rounded transition-all flex items-center justify-between cursor-pointer"
               >
-                <span>motionscale2026</span>
-                <span className="text-[10px] text-zinc-500">[Click to autofill]</span>
+                <span className="font-semibold">motionscale2026</span>
+                <span className="text-xs text-amber-400 font-medium">[Click to autofill]</span>
               </button>
             </div>
 
             <form onSubmit={handleAdminUnlock} className="space-y-4">
               <div>
-                <label className="block text-xs font-mono text-zinc-400 uppercase tracking-wider mb-2">
+                <label className="block text-sm font-mono text-zinc-300 uppercase tracking-wider mb-2 font-medium">
                   Executive Passcode
                 </label>
                 <input
@@ -398,22 +398,22 @@ export default function App() {
                   value={adminPassInput}
                   onChange={(e) => setAdminPassInput(e.target.value)}
                   placeholder="Enter passcode..."
-                  className="w-full bg-[#0E0E12] border border-[#2E2E35] px-4 py-3 text-sm text-white font-mono focus:outline-none focus:border-amber-400"
+                  className="w-full bg-[#0E0E12] border border-[#2E2E35] px-4 py-3.5 text-base text-white font-mono focus:outline-none focus:border-amber-400 rounded"
                   autoFocus
                 />
               </div>
 
-              <div className="flex space-x-3 pt-2">
+              <div className="flex space-x-3 pt-3">
                 <button
                   type="button"
                   onClick={() => setIsAdminPassModalOpen(false)}
-                  className="flex-1 py-3 px-4 text-xs font-mono uppercase tracking-wider text-zinc-400 hover:text-white border border-[#2E2E35] hover:border-zinc-500 transition-all cursor-pointer"
+                  className="flex-1 py-3.5 px-4 text-sm font-mono uppercase tracking-wider text-zinc-300 hover:text-white border border-[#2E2E35] hover:border-zinc-500 rounded transition-all cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 py-3 px-4 text-xs font-mono uppercase tracking-wider bg-amber-500 hover:bg-amber-400 text-black font-semibold transition-all cursor-pointer"
+                  className="flex-1 py-3.5 px-4 text-sm font-mono uppercase tracking-wider bg-amber-500 hover:bg-amber-400 text-black font-bold rounded transition-all cursor-pointer shadow-lg"
                 >
                   Unlock OS
                 </button>

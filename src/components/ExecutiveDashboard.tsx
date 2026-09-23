@@ -97,72 +97,72 @@ export default function ExecutiveDashboard({
       {/* Editorial Title Block */}
       <div className="border-b border-neutral-800 pb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-          <span className="text-xs font-mono tracking-[0.25em] text-neutral-400 uppercase">MotionScale Cockpit</span>
-          <h1 className="text-3xl font-sans font-medium text-white tracking-tight mt-1">Studio Operating System</h1>
+          <span className="text-sm font-mono tracking-[0.25em] text-neutral-400 uppercase font-medium">MotionScale Cockpit</span>
+          <h1 className="text-4xl font-sans font-semibold text-white tracking-tight mt-1.5">Studio Operating System</h1>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex items-center gap-2 bg-neutral-900 border border-neutral-800 px-3 py-1.5 rounded text-xs font-mono text-neutral-400">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <div className="flex items-center gap-2 bg-neutral-900 border border-neutral-800 px-3.5 py-2 rounded text-xs font-mono text-neutral-300">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
             <span>STUDIO MONITOR ACTIVE</span>
           </div>
         </div>
       </div>
 
-      <p className="text-sm text-neutral-405 max-w-2xl leading-relaxed">
+      <p className="text-base text-neutral-300 max-w-3xl leading-relaxed">
         Welcome to your unified creative headquarters. This operating system tracks and harmonizes the five core pillars of your premium studio: render pipelines, verified creative asset locks, billing invoice engines, isolated customer vaults, and automated strategic narrative proposals.
       </p>
 
       {/* Top row metrics cards */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
         {/* Metric 1 */}
-        <div className="bg-neutral-950 border border-neutral-900 rounded-lg p-5 hover:border-neutral-800 transition-colors duration-300 relative overflow-hidden group">
-          <div className="absolute top-0 left-0 w-1 h-full bg-white group-hover:bg-neutral-300 transition-colors duration-300"></div>
-          <span className="text-xs font-mono tracking-widest text-neutral-500 uppercase block mb-1">Pipeline Volume</span>
+        <div className="bg-neutral-950 border border-neutral-900 rounded-lg p-6 hover:border-neutral-800 transition-colors duration-300 relative overflow-hidden group">
+          <div className="absolute top-0 left-0 w-1.5 h-full bg-white group-hover:bg-neutral-300 transition-colors duration-300"></div>
+          <span className="text-xs font-mono tracking-widest text-neutral-400 uppercase block mb-1.5 font-medium">Pipeline Volume</span>
           <div className="flex items-baseline justify-between mt-2">
-            <h2 className="text-2xl font-mono text-white">${totalPipelineBudget.toLocaleString()}</h2>
-            <span className="text-[10px] font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 px-2 py-0.5 rounded flex items-center gap-1">
-              <TrendingUp className="w-3 h-3 text-emerald-500" />
+            <h2 className="text-3xl font-mono text-white font-bold">${totalPipelineBudget.toLocaleString()}</h2>
+            <span className="text-xs font-mono bg-neutral-900 text-neutral-200 border border-neutral-800 px-2.5 py-1 rounded flex items-center gap-1.5">
+              <TrendingUp className="w-3.5 h-3.5 text-emerald-400" />
               <span>4 Projects</span>
             </span>
           </div>
-          <p className="text-xs text-neutral-500 mt-2">From connected relational contracts</p>
+          <p className="text-xs text-neutral-400 mt-2.5">From connected relational contracts</p>
         </div>
 
         {/* Metric 2 */}
-        <div className="bg-neutral-950 border border-neutral-900 rounded-lg p-5 hover:border-neutral-800 transition-colors duration-300 relative overflow-hidden group">
-          <div className="absolute top-0 left-0 w-1 h-full bg-red-950 group-hover:bg-red-900 transition-colors duration-300"></div>
-          <span className="text-xs font-mono tracking-widest text-neutral-500 uppercase block mb-1">Active Rendering</span>
+        <div className="bg-neutral-950 border border-neutral-900 rounded-lg p-6 hover:border-neutral-800 transition-colors duration-300 relative overflow-hidden group">
+          <div className="absolute top-0 left-0 w-1.5 h-full bg-red-950 group-hover:bg-red-900 transition-colors duration-300"></div>
+          <span className="text-xs font-mono tracking-widest text-neutral-400 uppercase block mb-1.5 font-medium">Active Rendering</span>
           <div className="flex items-baseline justify-between mt-2">
-            <h2 className="text-2xl font-mono text-white">{activeRenderCount} Pipeline Renders</h2>
-            <span className="text-[10px] font-mono bg-neutral-900 text-red-400 border border-neutral-800 px-2 py-0.5 rounded flex items-center gap-1">
-              <Video className="w-3 h-3" />
+            <h2 className="text-3xl font-mono text-white font-bold">{activeRenderCount} Pipeline Renders</h2>
+            <span className="text-xs font-mono bg-neutral-900 text-red-300 border border-neutral-800 px-2.5 py-1 rounded flex items-center gap-1.5">
+              <Video className="w-3.5 h-3.5" />
               <span>GPU Active</span>
             </span>
           </div>
-          <p className="text-xs text-neutral-500 mt-2">Est GPU buffer remaining: 14h</p>
+          <p className="text-xs text-neutral-400 mt-2.5">Est GPU buffer remaining: 14h</p>
         </div>
 
         {/* Metric 3 */}
-        <div className="bg-neutral-950 border border-neutral-900 rounded-lg p-5 hover:border-neutral-800 transition-colors duration-300 relative overflow-hidden group">
-          <div className="absolute top-0 left-0 w-1 h-full bg-emerald-950 group-hover:bg-emerald-900 transition-colors duration-300"></div>
-          <span className="text-xs font-mono tracking-widest text-neutral-500 uppercase block mb-1">Cleared Earnings</span>
+        <div className="bg-neutral-950 border border-neutral-900 rounded-lg p-6 hover:border-neutral-800 transition-colors duration-300 relative overflow-hidden group">
+          <div className="absolute top-0 left-0 w-1.5 h-full bg-emerald-950 group-hover:bg-emerald-900 transition-colors duration-300"></div>
+          <span className="text-xs font-mono tracking-widest text-neutral-400 uppercase block mb-1.5 font-medium">Cleared Earnings</span>
           <div className="flex items-baseline justify-between mt-2">
-            <h2 className="text-2xl font-mono text-white">${totalClearedRevenue.toLocaleString()}</h2>
-            <span className="text-[10px] font-mono bg-neutral-900 text-emerald-400 border border-neutral-800 px-2 py-0.5 rounded flex items-center gap-1">
-              <CheckCircle className="w-3 h-3" />
+            <h2 className="text-3xl font-mono text-white font-bold">${totalClearedRevenue.toLocaleString()}</h2>
+            <span className="text-xs font-mono bg-neutral-900 text-emerald-300 border border-neutral-800 px-2.5 py-1 rounded flex items-center gap-1.5">
+              <CheckCircle className="w-3.5 h-3.5" />
               <span>Paid Invoices</span>
             </span>
           </div>
-          <p className="text-xs text-neutral-500 mt-2">Verified liquid reserves</p>
+          <p className="text-xs text-neutral-400 mt-2.5">Verified liquid reserves</p>
         </div>
 
         {/* Metric 4 */}
-        <div className="bg-neutral-950 border border-neutral-900 rounded-lg p-5 hover:border-neutral-800 transition-colors duration-300 relative overflow-hidden group">
-          <div className="absolute top-0 left-0 w-1 h-full bg-blue-950 group-hover:bg-blue-900 transition-colors duration-300"></div>
-          <span className="text-xs font-mono tracking-widest text-neutral-500 uppercase block mb-1">Escrow Assets Locks</span>
+        <div className="bg-neutral-950 border border-neutral-900 rounded-lg p-6 hover:border-neutral-800 transition-colors duration-300 relative overflow-hidden group">
+          <div className="absolute top-0 left-0 w-1.5 h-full bg-blue-950 group-hover:bg-blue-900 transition-colors duration-300"></div>
+          <span className="text-xs font-mono tracking-widest text-neutral-400 uppercase block mb-1.5 font-medium">Escrow Assets Locks</span>
           <div className="flex items-baseline justify-between mt-2">
-            <h2 className="text-2xl font-mono text-white">{totalSecuredAssetsCount} Shard Files</h2>
-            <span className="text-[10px] font-mono bg-neutral-900 text-blue-400 border border-neutral-800 px-2 py-0.5 rounded flex items-center gap-1">
+            <h2 className="text-3xl font-mono text-white font-bold">{totalSecuredAssetsCount} Shard Files</h2>
+            <span className="text-xs font-mono bg-neutral-900 text-blue-300 border border-neutral-800 px-2.5 py-1 rounded flex items-center gap-1.5">
               <Layers className="w-3 h-3" />
               <span>Ver. Control</span>
             </span>
@@ -313,21 +313,21 @@ export default function ExecutiveDashboard({
         {/* Neural AI Core Services Status */}
         <div className="bg-neutral-950 border border-neutral-900 rounded-lg p-6 flex flex-col justify-between">
           <div>
-            <span className="text-xs font-mono tracking-widest text-[#a3a3a3] uppercase block">Microservices Integration</span>
-            <h3 className="text-lg font-sans font-medium text-white tracking-tight mt-1">AI Co-Processor Health</h3>
+            <span className="text-xs font-mono tracking-widest text-neutral-400 uppercase block font-medium">Microservices Integration</span>
+            <h3 className="text-xl font-sans font-semibold text-white tracking-tight mt-1">AI Co-Processor Health</h3>
             
             <div className="mt-5 space-y-4">
               {/* Gemini health */}
-              <div className="bg-neutral-900/40 border border-neutral-900 p-3.5 rounded flex items-start gap-3 animate-pulse-subtle">
-                <Cpu className={`w-4 h-4 mt-0.5 ${loadingHealth ? "text-neutral-500 animate-spin" : health?.geminiKeyDetected ? "text-emerald-400" : "text-amber-500"}`} />
+              <div className="bg-neutral-900/40 border border-neutral-900 p-4 rounded flex items-start gap-3.5 animate-pulse-subtle">
+                <Cpu className={`w-5 h-5 mt-0.5 ${loadingHealth ? "text-neutral-500 animate-spin" : health?.geminiKeyDetected ? "text-emerald-400" : "text-amber-500"}`} />
                 <div>
-                  <div className="flex items-center gap-1.5 justify-between">
-                    <span className="text-xs font-mono font-medium text-white">Gemini 3.5 Flash Model</span>
-                    <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${health?.geminiKeyDetected ? "bg-emerald-950 text-emerald-300 border border-emerald-900" : "bg-amber-950 text-amber-300 border border-amber-900"}`}>
+                  <div className="flex items-center gap-2 justify-between">
+                    <span className="text-sm font-mono font-medium text-white">Gemini 3.5 Flash Model</span>
+                    <span className={`text-xs font-mono px-2 py-0.5 rounded font-semibold ${health?.geminiKeyDetected ? "bg-emerald-950 text-emerald-300 border border-emerald-900" : "bg-amber-950 text-amber-300 border border-amber-900"}`}>
                       {loadingHealth ? "RESOLVING" : health?.geminiKeyDetected ? "ACTIVE API" : "SIMULATION"}
                     </span>
                   </div>
-                  <p className="text-[11px] text-neutral-400 mt-1 leading-relaxed">
+                  <p className="text-xs text-neutral-300 mt-1.5 leading-relaxed">
                     {health?.geminiKeyDetected 
                       ? "Server-side pipeline established. Generates production-ready script specs & briefs on-demand."
                       : "Using elite offline-first simulation engine. High-fidelity storyboards drafted instantly."}
@@ -336,16 +336,16 @@ export default function ExecutiveDashboard({
               </div>
 
               {/* Cloud backup */}
-              <div className="bg-neutral-900/40 border border-neutral-900 p-3.5 rounded flex items-start gap-3">
-                <ShieldCheck className="w-4 h-4 text-emerald-400 mt-0.5" />
+              <div className="bg-neutral-900/40 border border-neutral-900 p-4 rounded flex items-start gap-3.5">
+                <ShieldCheck className="w-5 h-5 text-emerald-400 mt-0.5" />
                 <div>
-                  <div className="flex items-center gap-1.5 justify-between">
-                    <span className="text-xs font-mono font-medium text-white">Asset Security Shard</span>
-                    <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-900/30 text-emerald-400 border border-emerald-900/50">
+                  <div className="flex items-center gap-2 justify-between">
+                    <span className="text-sm font-mono font-medium text-white">Asset Security Shard</span>
+                    <span className="text-xs font-mono px-2 py-0.5 rounded bg-emerald-900/30 text-emerald-300 border border-emerald-900/50 font-semibold">
                       ENCRYPTED FEED
                     </span>
                   </div>
-                  <p className="text-[11px] text-neutral-400 mt-1 leading-relaxed">
+                  <p className="text-xs text-neutral-300 mt-1.5 leading-relaxed">
                     Local state persistency verified. Hash verification for 3D FBX, Voice MP3 and Rig configurations active.
                   </p>
                 </div>
@@ -373,28 +373,28 @@ export default function ExecutiveDashboard({
         <div className="bg-neutral-950 border border-neutral-900 rounded-lg p-6 md:col-span-2">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <span className="text-xs font-mono tracking-widest text-[#a3a3a3] uppercase block">Interactive Terminal</span>
-              <h3 className="text-lg font-sans font-medium text-white tracking-tight mt-1">Automated Studio Operations (Real-time Audit log)</h3>
+              <span className="text-xs font-mono tracking-widest text-neutral-400 uppercase block font-medium">Interactive Terminal</span>
+              <h3 className="text-xl font-sans font-semibold text-white tracking-tight mt-1">Automated Studio Operations (Real-time Audit log)</h3>
             </div>
-            <Activity className="w-4 h-4 text-neutral-500" />
+            <Activity className="w-5 h-5 text-neutral-400" />
           </div>
 
-          <div className="space-y-3.2 font-mono">
+          <div className="space-y-3 font-mono">
             {recentEvents.map((ev) => (
-              <div key={ev.id} className="text-xs flex items-start justify-between p-3 bg-neutral-900/20 border border-neutral-900/60 hover:bg-neutral-900/40 rounded transition-colors duration-200">
+              <div key={ev.id} className="text-sm flex items-start justify-between p-3.5 bg-neutral-900/25 border border-neutral-900/80 hover:bg-neutral-900/50 rounded transition-colors duration-200">
                 <div className="flex items-start gap-3">
-                  <div className="mt-0.5">
-                    {ev.type === "render" && <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 block animate-pulse"></span>}
-                    {ev.type === "invoice" && <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 block"></span>}
-                    {ev.type === "security" && <span className="w-2.5 h-2.5 rounded-full bg-red-400 block animate-pulse"></span>}
-                    {ev.type === "generation" && <span className="w-2.5 h-2.5 rounded-full bg-purple-400 block"></span>}
+                  <div className="mt-1">
+                    {ev.type === "render" && <span className="w-3 h-3 rounded-full bg-cyan-400 block animate-pulse"></span>}
+                    {ev.type === "invoice" && <span className="w-3 h-3 rounded-full bg-emerald-400 block"></span>}
+                    {ev.type === "security" && <span className="w-3 h-3 rounded-full bg-red-400 block animate-pulse"></span>}
+                    {ev.type === "generation" && <span className="w-3 h-3 rounded-full bg-purple-400 block"></span>}
                   </div>
                   <div>
-                    <span className="text-white block font-medium">{ev.msg}</span>
-                    <span className="text-[11px] text-neutral-400 mt-0.5 block">{ev.desc}</span>
+                    <span className="text-white block font-medium text-sm">{ev.msg}</span>
+                    <span className="text-xs text-neutral-300 mt-1 block leading-relaxed">{ev.desc}</span>
                   </div>
                 </div>
-                <span className="text-[10px] text-neutral-500">{ev.time}</span>
+                <span className="text-xs text-neutral-400 font-mono shrink-0 ml-4">{ev.time}</span>
               </div>
             ))}
           </div>
@@ -403,19 +403,19 @@ export default function ExecutiveDashboard({
         {/* Sales Blueprint Quick Launch Panel */}
         <div className="bg-neutral-950 border border-neutral-900 rounded-lg p-6 flex flex-col justify-between">
           <div>
-            <span className="text-xs font-mono tracking-widest text-neutral-500 uppercase block">High-Value Pitching</span>
-            <h3 className="text-lg font-sans font-medium text-white tracking-tight mt-1">High-Ticket Pitch ROI Sandbox</h3>
-            <p className="text-xs text-neutral-400 leading-relaxed mt-3">
+            <span className="text-xs font-mono tracking-widest text-neutral-400 uppercase block font-medium">High-Value Pitching</span>
+            <h3 className="text-xl font-sans font-semibold text-white tracking-tight mt-1">High-Ticket Pitch ROI Sandbox</h3>
+            <p className="text-sm text-neutral-300 leading-relaxed mt-3">
               This system is built of elite relational templates tailored for production workflow constraints. By demonstrating state-of-the-art automation and asset escrow tools to prospects, you raise visual design deals to $5,000+ packages.
             </p>
-            <div className="bg-neutral-900/30 border border-neutral-900 rounded p-3 mt-4 text-xs font-mono text-neutral-400 space-y-2">
+            <div className="bg-neutral-900/40 border border-neutral-900 rounded p-4 mt-4 text-sm font-mono text-neutral-300 space-y-2.5">
               <div className="flex justify-between">
                 <span>Self-serve template:</span>
-                <span className="text-white">$1,000 / License</span>
+                <span className="text-white font-medium">$1,000 / License</span>
               </div>
               <div className="flex justify-between">
                 <span>VIP Custom Studio Setup:</span>
-                <span className="text-amber-400">$5,000+ Engagement</span>
+                <span className="text-amber-400 font-bold">$5,000+ Engagement</span>
               </div>
             </div>
           </div>
@@ -423,10 +423,10 @@ export default function ExecutiveDashboard({
           <div className="mt-6">
             <button 
               onClick={() => onNavigateToTab("sandbox")}
-              className="w-full bg-white text-black hover:bg-neutral-200 text-xs font-mono py-2.5 rounded font-medium transition-all duration-200 flex items-center justify-center gap-1.5"
+              className="w-full bg-white text-black hover:bg-neutral-200 text-sm font-mono py-3 rounded font-semibold transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-md"
             >
               <span>INSPECT PITCH SANDBOX</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
+              <ArrowUpRight className="w-4 h-4" />
             </button>
           </div>
         </div>
