@@ -38,7 +38,8 @@ import {
   X,
   ShieldCheck,
   Cpu,
-  Lock
+  Lock,
+  Sparkles
 } from "lucide-react";
 
 export default function App() {

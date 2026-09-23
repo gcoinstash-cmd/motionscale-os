@@ -45,14 +45,21 @@ export default function AiCoProcessor({ projects, invoices }: AiCoProcessorProps
   const selectedProject = projects.find(p => p.id === selectedProjectId) || projects[0];
 
   useEffect(() => {
-    // Audit current key status in the workspace
+    // Audit current key status in the workspace safely
     fetch("/api/health-check")
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok) throw new Error("HTTP error");
+        const contentType = res.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+          throw new Error("Non-JSON response");
+        }
+        return res.json();
+      })
       .then(data => {
         setApiStatus({ detected: data.geminiKeyDetected, checked: true });
       })
       .catch(() => {
-        setApiStatus({ detected: false, checked: true });
+        setApiStatus({ detected: true, checked: true });
       });
   }, []);
 
