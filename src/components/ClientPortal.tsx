@@ -275,12 +275,12 @@ export default function ClientPortal({
           <FolderLock className="w-5 h-5 text-emerald-400" />
           <div>
             <span className="text-white font-medium block">Asset Pipeline Cryptography Handshake</span>
-            <span className="text-[10px] text-neutral-500 block">Each uploaded asset is compiled with cryptographic checksum validation: [{encryptionStatus}]</span>
+            <span className="text-xs font-semibold tracking-wider text-neutral-500 block">Each uploaded asset is compiled with cryptographic checksum validation: [{encryptionStatus}]</span>
           </div>
         </div>
 
         <div className="flex items-center gap-3 justify-between sm:justify-start">
-          <div className="flex items-center gap-1.5 text-[10px] text-neutral-400 bg-neutral-900 px-2.5 py-1 rounded border border-neutral-800">
+          <div className="flex items-center gap-1.5 text-xs font-semibold tracking-wider text-neutral-400 bg-neutral-900 px-2.5 py-1 rounded border border-neutral-800">
             <Fingerprint className="w-3.5 h-3.5 text-neutral-400" />
             <span>ECC-256 KEYS:</span>
             <span className="font-bold text-emerald-400">ENFORCED</span>
@@ -316,9 +316,9 @@ export default function ClientPortal({
                   <div className="p-5 border-b border-neutral-900 bg-neutral-900/10 space-y-3">
                     <div className="flex items-start justify-between gap-2">
                       <div>
-                        <span className="text-[10px] font-mono text-neutral-500 block uppercase tracking-wider">PROJECT ESCROW CONTAINER</span>
+                        <span className="text-xs font-semibold tracking-wider font-mono text-neutral-500 block uppercase tracking-wider">PROJECT ESCROW CONTAINER</span>
                         <h3 className="text-base font-sans font-medium text-white tracking-tight mt-0.5">{p.name}</h3>
-                        <span className="text-[11px] font-mono text-neutral-400">Client: {p.clientName}</span>
+                        <span className="text-xs font-semibold font-mono text-neutral-400">Client: {p.clientName}</span>
                       </div>
                       
                       <button 
@@ -353,7 +353,7 @@ export default function ClientPortal({
                   {!isCollapsed && (
                     <div className="px-5 py-3.5 bg-neutral-950 border-b border-neutral-900 space-y-2.5">
                       <div className="flex items-center justify-between">
-                        <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest flex items-center gap-1.5">
+                        <span className="text-xs font-semibold tracking-wider font-mono text-neutral-500 uppercase tracking-widest flex items-center gap-1.5">
                           <Cpu className="w-3 h-3 text-neutral-400" />
                           <span>Pipeline Pre-flight Checklist</span>
                         </span>
@@ -368,13 +368,13 @@ export default function ClientPortal({
                       </div>
 
                       {requirements.length === 0 ? (
-                        <p className="text-[11px] font-mono text-neutral-500 italic">No restrictive escrow checks required for early {p.status} stage.</p>
+                        <p className="text-xs font-semibold font-mono text-neutral-500 italic">No restrictive escrow checks required for early {p.status} stage.</p>
                       ) : (
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                           {requirements.map((req, rid) => (
                             <div 
                               key={rid} 
-                              className={`p-2 rounded border text-[11px] font-mono flex items-center justify-between ${
+                              className={`p-2 rounded border text-xs font-semibold font-mono flex items-center justify-between ${
                                 req.isMet 
                                   ? "bg-neutral-900/40 border-neutral-900 text-neutral-300" 
                                   : "bg-neutral-950 border-neutral-900 text-neutral-500"
@@ -406,10 +406,10 @@ export default function ClientPortal({
                   {/* Relational Assets list inside this Project card */}
                   {!isCollapsed && (
                     <div className="p-5 flex-1 space-y-3">
-                      <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest block font-semibold mb-2">Deposited Assets: {projectAssets.length}</span>
+                      <span className="text-xs font-semibold tracking-wider font-mono text-neutral-500 uppercase tracking-widest block font-semibold mb-2">Deposited Assets: {projectAssets.length}</span>
                       
                       {projectAssets.length === 0 ? (
-                        <div className="py-8 text-center text-neutral-600 font-mono text-[11px] border border-dashed border-neutral-900/80 rounded">
+                        <div className="py-8 text-center text-neutral-600 font-mono text-xs font-semibold border border-dashed border-neutral-900/80 rounded">
                           No assets deposited for this container yet. 
                         </div>
                       ) : (
@@ -429,11 +429,11 @@ export default function ClientPortal({
                                   <div className="min-w-0">
                                     <div className="flex items-center gap-2 flex-wrap">
                                       <span className="font-sans font-medium text-white truncate max-w-[170px]">{asset.name}</span>
-                                      <span className="text-[10px] font-mono bg-neutral-900 border border-neutral-800 text-neutral-400 px-1.5 py-0.2 rounded shrink-0">
+                                      <span className="text-xs font-semibold tracking-wider font-mono bg-neutral-900 border border-neutral-800 text-neutral-400 px-1.5 py-0.2 rounded shrink-0">
                                         {asset.version}
                                       </span>
                                     </div>
-                                    <code className="text-[10px] text-neutral-500 font-mono block truncate max-w-[200px] mt-0.5">{asset.fileUrl}</code>
+                                    <code className="text-xs font-semibold tracking-wider text-neutral-500 font-mono block truncate max-w-[200px] mt-0.5">{asset.fileUrl}</code>
                                   </div>
                                 </div>
 
@@ -492,7 +492,7 @@ export default function ClientPortal({
                         setNewAsset(prev => ({ ...prev, targetProjectId: p.id }));
                         setShowAddAssetModal(true);
                       }}
-                      className="border border-neutral-900 bg-neutral-950 hover:bg-neutral-900 text-neutral-400 hover:text-white font-mono text-[10px] px-3 py-1 flex items-center gap-1 transition-all rounded"
+                      className="border border-neutral-900 bg-neutral-950 hover:bg-neutral-900 text-neutral-400 hover:text-white font-mono text-xs font-semibold tracking-wider px-3 py-1 flex items-center gap-1 transition-all rounded"
                     >
                       <Plus className="w-3 h-3" />
                       <span>DEPOSIT TO {p.clientName.toUpperCase()}</span>
@@ -527,7 +527,7 @@ export default function ClientPortal({
                 </div>
               </div>
 
-              <div className="text-[10px] text-neutral-500 font-mono flex items-center gap-1.5 bg-neutral-900/60 border border-neutral-800/40 px-2 py-1 rounded">
+              <div className="text-xs font-semibold tracking-wider text-neutral-500 font-mono flex items-center gap-1.5 bg-neutral-900/60 border border-neutral-800/40 px-2 py-1 rounded">
                 <Lock className="w-3.5 h-3.5 text-neutral-400" />
                 <span>AES-256 Secured Cabinet Locker</span>
               </div>
@@ -555,13 +555,13 @@ export default function ClientPortal({
                         
                         <div>
                           <div className="flex items-center gap-2 flex-wrap">
-                            <span className="text-[10px] font-mono text-neutral-400 block uppercase tracking-widest">{asset.type}</span>
+                            <span className="text-xs font-semibold tracking-wider font-mono text-neutral-400 block uppercase tracking-widest">{asset.type}</span>
                             <span className="text-[9.5px] font-mono bg-neutral-900 border border-neutral-800 text-neutral-400 px-1.5 py-0.2 rounded font-medium">
                               {asset.version}
                             </span>
                           </div>
                           <h4 className="text-sm font-sans font-semibold text-white tracking-tight mt-1">{asset.name}</h4>
-                          <code className="text-[10px] text-neutral-500 font-mono block mt-1 break-all bg-neutral-950/40 py-0.5 px-1.5 rounded border border-neutral-900/50 max-w-[340px] md:max-w-md">{asset.fileUrl}</code>
+                          <code className="text-xs font-semibold tracking-wider text-neutral-500 font-mono block mt-1 break-all bg-neutral-950/40 py-0.5 px-1.5 rounded border border-neutral-900/50 max-w-[340px] md:max-w-md">{asset.fileUrl}</code>
                         </div>
                       </div>
 
@@ -577,7 +577,7 @@ export default function ClientPortal({
 
                           <button 
                             onClick={() => onUpdateAssetStatus(asset.id, asset.status === "Approved" ? "Draft" : "Approved")}
-                            className={`px-2.5 py-1 text-[10px] uppercase border transition-all ${asset.status === "Approved" ? "bg-black text-neutral-400 hover:text-white border-neutral-800 font-medium" : "bg-white text-black border-neutral-100 hover:bg-neutral-200 font-semibold"}`}
+                            className={`px-2.5 py-1 text-xs font-semibold tracking-wider uppercase border transition-all ${asset.status === "Approved" ? "bg-black text-neutral-400 hover:text-white border-neutral-800 font-medium" : "bg-white text-black border-neutral-100 hover:bg-neutral-200 font-semibold"}`}
                           >
                             {asset.status === "Approved" ? "MARK DRAFT" : "APPROVE"}
                           </button>
@@ -619,7 +619,7 @@ export default function ClientPortal({
           <div className="lg:col-span-4 space-y-4">
             {/* Sync compliance checklist box */}
             <div className="bg-neutral-950 border border-neutral-900 rounded-lg p-5 space-y-4 text-xs font-mono text-left">
-              <span className="text-[10px] text-neutral-500 uppercase block tracking-widest font-semibold">
+              <span className="text-xs font-semibold tracking-wider text-neutral-500 uppercase block tracking-widest font-semibold">
                 Strategic Pre-flight Cabinet
               </span>
 
@@ -634,7 +634,7 @@ export default function ClientPortal({
                         {currentProject.name}
                       </div>
 
-                      <div className="space-y-2 text-[11px] text-neutral-400">
+                      <div className="space-y-2 text-xs font-semibold text-neutral-400">
                         <div className="flex justify-between">
                           <span>PIPELINE STAGE:</span>
                           <span className="text-white font-semibold uppercase">{currentProject.status}</span>
@@ -643,14 +643,14 @@ export default function ClientPortal({
                           <span>PROGRESS STAT:</span>
                           <span className="text-amber-400 font-semibold">{currentProject.progress}%</span>
                         </div>
-                        <div className="pt-2 border-t border-neutral-900/40 text-[10px]">
+                        <div className="pt-2 border-t border-neutral-900/40 text-xs font-semibold tracking-wider">
                           <span className="text-neutral-500 block mb-2 font-semibold tracking-wider">PIPELINE SHIELD CHECKLIST:</span>
                           {requirements.length === 0 ? (
                             <span className="text-emerald-400 italic block">✅ Active Stage requirements cleared</span>
                           ) : (
                             <div className="space-y-1.5">
                               {requirements.map((req, rid) => (
-                                <div key={rid} className="flex justify-between items-center bg-neutral-900 px-2.5 py-1.5 rounded font-mono text-[10px]">
+                                <div key={rid} className="flex justify-between items-center bg-neutral-900 px-2.5 py-1.5 rounded font-mono text-xs font-semibold tracking-wider">
                                   <span className="truncate pr-1 text-neutral-400">{req.type}</span>
                                   <span className={`font-semibold ${req.isMet ? "text-emerald-400" : "text-amber-500 animate-pulse-subtle"}`}>
                                     {req.status === "Approved" ? "SECURE ✓" : req.status === "Draft" ? "REQUIRES LOCK ⚠️" : "MISSING ❌"}
@@ -670,14 +670,14 @@ export default function ClientPortal({
             </div>
 
             <div className="bg-neutral-950 border border-neutral-900 rounded-lg p-5 space-y-3 text-xs font-mono text-left">
-              <span className="text-[10px] text-neutral-500 uppercase block tracking-widest font-semibold flex items-center gap-1">
+              <span className="text-xs font-semibold tracking-wider text-neutral-500 uppercase block tracking-widest font-semibold flex items-center gap-1">
                 <Info className="w-3.5 h-3.5" />
                 <span>Asset Escrow Rules</span>
               </span>
               <p className="text-neutral-400 leading-relaxed text-[11.5px]">
                 MotionScale OS synchronizes the Cabinet with the production pipeline board. If a mandatory asset class is not both approved and locked of status in the Escrow Cabinet:
               </p>
-              <ol className="list-decimal list-inside space-y-2 text-[11px] text-neutral-400">
+              <ol className="list-decimal list-inside space-y-2 text-xs font-semibold text-neutral-400">
                 <li>Progress transitions will log internal pipeline warnings or blockages in the production lanes.</li>
                 <li>MFA-secured clients can preview and approve file versions securely within client portal frameworks.</li>
               </ol>
@@ -703,11 +703,11 @@ export default function ClientPortal({
 
             <form onSubmit={handleAssetUploadSubmit} className="space-y-4 text-xs font-mono">
               <div className="space-y-1">
-                <label className="text-[10px] text-neutral-500 block uppercase font-semibold">TARGET PRODUCTION PROJECT</label>
+                <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase font-semibold">TARGET PRODUCTION PROJECT</label>
                 <select 
                   value={newAsset.targetProjectId}
                   onChange={(e) => setNewAsset({ ...newAsset, targetProjectId: e.target.value })}
-                  className="w-full bg-neutral-900 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                  className="w-full bg-neutral-900 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                 >
                   {projects.map(p => (
                     <option key={p.id} value={p.id}>{p.name} ({p.clientName})</option>
@@ -716,24 +716,24 @@ export default function ClientPortal({
               </div>
 
               <div className="space-y-1">
-                <label className="text-[10px] text-neutral-500 block uppercase font-semibold">ASSET CONTAINER NAME</label>
+                <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase font-semibold">ASSET CONTAINER NAME</label>
                 <input 
                   type="text" 
                   required
                   value={newAsset.name}
                   onChange={(e) => setNewAsset({ ...newAsset, name: e.target.value })}
                   placeholder="e.g. Master Living Room Lighting Rig"
-                  className="w-full bg-neutral-900 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                  className="w-full bg-neutral-900 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <label className="text-[10px] text-neutral-500 block uppercase font-semibold">ASSET COMPONENT TYPE</label>
+                  <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase font-semibold">ASSET COMPONENT TYPE</label>
                   <select 
                     value={newAsset.type}
                     onChange={(e) => setNewAsset({ ...newAsset, type: e.target.value as CreativeAsset["type"] })}
-                    className="w-full bg-neutral-900 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                    className="w-full bg-neutral-900 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                   >
                     <option value="3D Model">3D Model (FBX/OBJ)</option>
                     <option value="Rig">Rigging / Anim Node</option>
@@ -745,27 +745,27 @@ export default function ClientPortal({
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[10px] text-neutral-500 block uppercase font-semibold">VERSION EMBED</label>
+                  <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase font-semibold">VERSION EMBED</label>
                   <input 
                     type="text" 
                     required
                     value={newAsset.version}
                     onChange={(e) => setNewAsset({ ...newAsset, version: e.target.value })}
                     placeholder="e.g. v1.4"
-                    className="w-full bg-neutral-900 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                    className="w-full bg-neutral-900 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                   />
                 </div>
               </div>
 
               <div className="space-y-1">
-                <label className="text-[10px] text-neutral-500 block uppercase font-semibold">SECURE CLOUD CDN FILE URL</label>
+                <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase font-semibold">SECURE CLOUD CDN FILE URL</label>
                 <input 
                   type="text" 
                   required
                   value={newAsset.fileUrl}
                   onChange={(e) => setNewAsset({ ...newAsset, fileUrl: e.target.value })}
                   placeholder="e.g. /assets/living_atrium_rig_v1.zip"
-                  className="w-full bg-neutral-900 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                  className="w-full bg-neutral-900 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                 />
               </div>
 
@@ -779,7 +779,7 @@ export default function ClientPortal({
                 </button>
                 <button
                   type="submit"
-                  className="bg-white text-black hover:bg-neutral-200 px-4 py-2 rounded font-semibold"
+                  className="bg-white text-black hover:bg-neutral-200 px-5 py-3 min-h-[44px] rounded font-semibold"
                 >
                   DEPOSIT FILE
                 </button>

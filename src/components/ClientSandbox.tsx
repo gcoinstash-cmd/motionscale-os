@@ -634,7 +634,7 @@ export default function ClientSandbox({
 
           {authStage === "idle" ? (
             <div className="space-y-4">
-              <label className="text-[10px] font-mono text-neutral-400 block uppercase tracking-wider font-semibold">SELECT SIMULATED ID GATEWAY:</label>
+              <label className="text-sm font-semibold tracking-wider font-mono text-neutral-400 block uppercase tracking-wider font-semibold">SELECT SIMULATED ID GATEWAY:</label>
               
               <div className="space-y-3">
                 {portals.map((portal) => {
@@ -646,9 +646,9 @@ export default function ClientSandbox({
                       className="w-full text-left bg-neutral-950 hover:bg-neutral-900/50 border border-neutral-900 hover:border-neutral-800 p-4 rounded-md transition-all duration-200 flex items-center justify-between group"
                     >
                       <div className="space-y-1">
-                        <span className="text-[10px] text-neutral-500 font-mono block tracking-widest uppercase">ENTERPRISE PORTAL</span>
+                        <span className="text-xs font-semibold tracking-wider text-neutral-500 font-mono block tracking-widest uppercase">ENTERPRISE PORTAL</span>
                         <h3 className="text-sm font-sans font-medium text-white group-hover:text-amber-400 transition-colors">{portal.companyName}</h3>
-                        <div className="flex items-center gap-3 text-[10px] font-mono text-neutral-400">
+                        <div className="flex items-center gap-3 text-xs font-semibold tracking-wider font-mono text-neutral-400">
                           <span>Value: ${(portal.totalContractValue / 1000).toFixed(0)}k</span>
                           <span>•</span>
                           <span>{projectCount} Active Pipeline{projectCount === 1 ? "" : "s"}</span>
@@ -700,7 +700,7 @@ export default function ClientSandbox({
               </div>
 
               {/* Shifting log block */}
-              <div className="w-full bg-neutral-950/80 border border-neutral-900 p-3 text-left rounded-md font-mono text-[10px] space-y-1 h-36 overflow-y-auto">
+              <div className="w-full bg-neutral-950/80 border border-neutral-900 p-3 text-left rounded-md font-mono text-xs font-semibold tracking-wider space-y-1 h-36 overflow-y-auto">
                 {authLogs.map((log, idx) => (
                   <div key={idx} className="text-neutral-400 flex items-start gap-1">
                     <span className="text-amber-500 select-none">&gt;</span>
@@ -761,7 +761,7 @@ export default function ClientSandbox({
 
           <button
             onClick={handleLogout}
-            className="bg-white hover:bg-neutral-200 text-black font-semibold text-xs font-mono px-4 py-2 flex items-center gap-1.5 transition-all rounded"
+            className="bg-white hover:bg-neutral-200 text-black font-semibold text-base font-semibold min-h-[44px] font-mono px-5 py-3 min-h-[44px] flex items-center gap-1.5 transition-all rounded"
           >
             <Lock className="w-3.5 h-3.5" />
             <span>DISCONNECT VAULT</span>
@@ -778,7 +778,7 @@ export default function ClientSandbox({
             <Fingerprint className="w-5 h-5" />
           </div>
           <div>
-            <span className="text-[10px] text-neutral-500 block uppercase font-bold">CLIENT SIGNATURE</span>
+            <span className="text-xs font-semibold tracking-wider text-neutral-500 block uppercase font-bold">CLIENT SIGNATURE</span>
             <span className="text-white block font-medium">ECC-256 VERIFIED</span>
           </div>
         </div>
@@ -793,7 +793,7 @@ export default function ClientSandbox({
             <ShieldCheck className="w-5 h-5" />
           </div>
           <div>
-            <span className="text-[10px] text-neutral-500 block uppercase font-bold">MFA SECURED</span>
+            <span className="text-xs font-semibold tracking-wider text-neutral-500 block uppercase font-bold">MFA SECURED</span>
             <span className="text-white block font-semibold uppercase">{activePortal?.mfaEnabled ? "Hardware Token active" : "HARDWARE MUTED"}</span>
           </div>
         </div>
@@ -804,7 +804,7 @@ export default function ClientSandbox({
             <Globe className="w-5 h-5" />
           </div>
           <div>
-            <span className="text-[10px] text-neutral-500 block uppercase font-bold">IP NODE CODE</span>
+            <span className="text-xs font-semibold tracking-wider text-neutral-500 block uppercase font-bold">IP NODE CODE</span>
             <span className="text-white block font-medium">188.40.23.11 [SECURE]</span>
           </div>
         </div>
@@ -815,7 +815,7 @@ export default function ClientSandbox({
             <Database className="w-5 h-5" />
           </div>
           <div>
-            <span className="text-[10px] text-neutral-500 block uppercase font-bold">SECURED CONTRACT VALUE</span>
+            <span className="text-xs font-semibold tracking-wider text-neutral-500 block uppercase font-bold">SECURED CONTRACT VALUE</span>
             <span className="text-white block font-semibold">${(activePortal?.totalContractValue || 0).toLocaleString()} USD</span>
           </div>
         </div>
@@ -831,7 +831,7 @@ export default function ClientSandbox({
           {/* Deliverable review header */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-neutral-900 pb-3 font-mono text-xs">
             <div>
-              <span className="text-[10px] text-neutral-500 block uppercase font-semibold">Active Review Target File</span>
+              <span className="text-xs font-semibold tracking-wider text-neutral-500 block uppercase font-semibold">Active Review Target File</span>
               <div className="flex items-center gap-2 mt-1">
                 <span className="text-white font-medium uppercase text-sm">SELECT RE-RENDER DECK:</span>
                 <select
@@ -846,7 +846,7 @@ export default function ClientSandbox({
               </div>
             </div>
 
-            <div className="flex flex-col sm:items-end text-[10px] text-neutral-400 space-y-0.5">
+            <div className="flex flex-col sm:items-end text-xs font-semibold tracking-wider text-neutral-400 space-y-0.5">
               <div>
                 <span>BUDGET:</span> <span className="font-semibold text-white">${selectedProject?.budget.toLocaleString()}</span>
               </div>
@@ -860,7 +860,7 @@ export default function ClientSandbox({
           <div className="bg-neutral-950 border border-neutral-900 rounded-lg overflow-hidden flex flex-col relative">
             
             {/* Top diagnostic metadata layer overlay */}
-            <div className="p-3 bg-neutral-950 border-b border-neutral-900/60 font-mono text-[10px] flex items-center justify-between z-10 text-neutral-400">
+            <div className="p-3 bg-neutral-950 border-b border-neutral-900/60 font-mono text-xs font-semibold tracking-wider flex items-center justify-between z-10 text-neutral-400">
               <div className="flex items-center gap-2">
                 <div className={`w-1.5 h-1.5 rounded-full ${isPlaying ? "bg-red-500 animate-pulse" : "bg-neutral-600"}`}></div>
                 <span>STREAM: DECRYPTED_DIRECT_MESH_SERVER</span>
@@ -887,7 +887,7 @@ export default function ClientSandbox({
                     <CheckCircle className="w-10 h-10 text-emerald-400 mx-auto" />
                     <div>
                       <span className="text-white font-bold block uppercase tracking-widest">FINAL ASS-CLEARED</span>
-                      <p className="text-[11px] text-neutral-400 mt-1 leading-normal">This deliverable is locked & certified. High-res transport links have matured.</p>
+                      <p className="text-xs font-semibold text-neutral-400 mt-1 leading-normal">This deliverable is locked & certified. High-res transport links have matured.</p>
                     </div>
                   </div>
                 </div>
@@ -899,7 +899,7 @@ export default function ClientSandbox({
               
               {/* Scrub timeline bar */}
               <div className="w-full flex items-center gap-3.5">
-                <span className="text-[10px] text-neutral-500 select-none">00:00</span>
+                <span className="text-xs font-semibold tracking-wider text-neutral-500 select-none">00:00</span>
                 <div 
                   className="flex-1 bg-neutral-950 border border-neutral-900 h-2.5 rounded-full cursor-pointer relative overflow-hidden"
                   onClick={(e) => {
@@ -918,7 +918,7 @@ export default function ClientSandbox({
                     <div className="absolute right-0 top-0 bottom-0 w-1 bg-white shadow-[0_0_6px_rgba(255,255,255,0.8)]"></div>
                   </div>
                 </div>
-                <span className="text-[10px] text-neutral-500 select-none">01:24</span>
+                <span className="text-xs font-semibold tracking-wider text-neutral-500 select-none">01:24</span>
               </div>
 
               {/* Functional playback controls buttons row */}
@@ -952,7 +952,7 @@ export default function ClientSandbox({
                   >
                     {isMuted ? <VolumeX className="w-4 h-4 text-emerald-400" /> : <Volume2 className="w-4 h-4" />}
                   </button>
-                  <span className="text-[10px] text-neutral-500 uppercase">Stereo Shards</span>
+                  <span className="text-xs font-semibold tracking-wider text-neutral-500 uppercase">Stereo Shards</span>
                 </div>
               </div>
 
@@ -965,13 +965,13 @@ export default function ClientSandbox({
             
             <div className="bg-neutral-900/10 border border-neutral-900/80 rounded-md p-3.5 flex flex-col justify-between">
               <div>
-                <span className="text-[10px] text-neutral-500 block uppercase font-bold text-left">Pipeline Phase Lock</span>
-                <p className="text-[11px] text-neutral-400 mt-1 leading-normal text-left">
+                <span className="text-xs font-semibold tracking-wider text-neutral-500 block uppercase font-bold text-left">Pipeline Phase Lock</span>
+                <p className="text-xs font-semibold text-neutral-400 mt-1 leading-normal text-left">
                   This media review window shows a sandboxed client version hash. The escrow pipeline restricts high-fidelity source meshes until signature clearance is active.
                 </p>
               </div>
 
-              <div className="flex items-center justify-between text-[10px] pt-3 mt-3 border-t border-neutral-900/40">
+              <div className="flex items-center justify-between text-xs font-semibold tracking-wider pt-3 mt-3 border-t border-neutral-900/40">
                 <span className="text-neutral-500">ESCROW CHECKLIST:</span>
                 <span className={`font-semibold uppercase ${selectedProject?.status === "Approved" ? "text-emerald-400" : "text-amber-500 animate-pulse-subtle"}`}>
                   {selectedProject?.status === "Approved" ? "CLEARED ✓" : "ESCROW ACTIVE ⚠️"}
@@ -982,8 +982,8 @@ export default function ClientSandbox({
             {/* Elite Command Action approve deliverable */}
             <div className="bg-neutral-900/10 border border-neutral-900/80 rounded-md p-3.5 flex flex-col justify-between gap-3">
               <div>
-                <span className="text-[10px] text-neutral-500 block uppercase font-bold text-left text-amber-500">Final Clearance Action</span>
-                <p className="text-[11px] text-neutral-400 mt-1 leading-normal text-left">
+                <span className="text-xs font-semibold tracking-wider text-neutral-500 block uppercase font-bold text-left text-amber-500">Final Clearance Action</span>
+                <p className="text-xs font-semibold text-neutral-400 mt-1 leading-normal text-left">
                   Approve and clear this project deliverable. This action dispatches a cryptographic TLS lock on active meshes and triggers creative CFO invoices from billing lanes.
                 </p>
               </div>
@@ -996,7 +996,7 @@ export default function ClientSandbox({
               ) : (
                 <button
                   onClick={handleApproveProject}
-                  className="w-full bg-[#10b981] hover:bg-[#059669] text-black font-semibold text-xs py-2.5 rounded flex items-center justify-center gap-1.5 transition-colors uppercase"
+                  className="w-full bg-[#10b981] hover:bg-[#059669] text-black font-semibold text-base font-semibold min-h-[44px] py-2.5 rounded flex items-center justify-center gap-1.5 transition-colors uppercase"
                 >
                   <CheckCircle className="w-4 h-4" />
                   <span>Approve & Clear Final Asset</span>
@@ -1021,7 +1021,7 @@ export default function ClientSandbox({
             <form onSubmit={handleAddComment} className="space-y-3 font-mono text-xs">
               <div className="space-y-1">
                 <div className="flex justify-between items-center">
-                  <label className="text-[10px] text-neutral-500 uppercase tracking-wide">POST TIMESTAMP ANNOTATION</label>
+                  <label className="text-sm font-semibold tracking-wider text-neutral-500 uppercase tracking-wide">POST TIMESTAMP ANNOTATION</label>
                   <button 
                     type="button"
                     onClick={() => setCommentManualTime(getTimecode(playProgress))}
@@ -1036,7 +1036,7 @@ export default function ClientSandbox({
                   value={newCommentText}
                   onChange={(e) => setNewCommentText(e.target.value)}
                   placeholder="e.g. Highlight refraction looks heavy in lower quadrant..."
-                  className="w-full bg-neutral-900 border border-neutral-850 rounded px-2.5 py-1.8 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                  className="w-full bg-neutral-900 border border-neutral-850 rounded px-2.5 py-1.8 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                 />
               </div>
 
@@ -1046,11 +1046,11 @@ export default function ClientSandbox({
                   value={commentManualTime}
                   onChange={(e) => setCommentManualTime(e.target.value)}
                   placeholder="Time override (e.g. 00:00:30)"
-                  className="w-1/2 bg-neutral-900 border border-neutral-850 rounded px-2.5 py-1.5 text-[10px] text-neutral-300 focus:outline-none focus:border-neutral-600 font-mono"
+                  className="w-1/2 bg-neutral-900 border border-neutral-850 rounded px-2.5 py-1.5 text-xs font-semibold tracking-wider text-neutral-300 focus:outline-none focus:border-neutral-600 font-mono"
                 />
                 <button
                   type="submit"
-                  className="w-1/2 bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 text-white font-semibold text-[11px]"
+                  className="w-1/2 bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 text-white font-semibold text-base font-semibold min-h-[44px] font-semibold"
                 >
                   LOG ANNOTATION
                 </button>
@@ -1060,11 +1060,11 @@ export default function ClientSandbox({
             {/* Comments List rendering */}
             <div className="space-y-3.5 max-h-[220px] overflow-y-auto pr-1">
               {!selectedProject || !projectComments[selectedProject.id] || projectComments[selectedProject.id].length === 0 ? (
-                <p className="text-[11px] font-mono text-neutral-600 italic text-center py-6">No annotations posted under this review file yet.</p>
+                <p className="text-xs font-semibold font-mono text-neutral-600 italic text-center py-6">No annotations posted under this review file yet.</p>
               ) : (
                 projectComments[selectedProject.id].map((com) => (
                   <div key={com.id} className="p-3 bg-neutral-900/30 border border-neutral-900/40 rounded text-left space-y-1">
-                    <div className="flex items-center justify-between text-[10px]">
+                    <div className="flex items-center justify-between text-xs font-semibold tracking-wider">
                       <span className="font-bold text-white truncate max-w-[150px]">{com.author}</span>
                       <span className="text-neutral-500 text-[9px] shrink-0">{com.date}</span>
                     </div>
@@ -1091,15 +1091,15 @@ export default function ClientSandbox({
 
             <div className="space-y-3 font-mono text-xs">
               <div className="bg-neutral-950/80 border border-neutral-900 p-2.5 rounded space-y-1 text-neutral-400">
-                <div className="flex justify-between text-[10px]">
+                <div className="flex justify-between text-xs font-semibold tracking-wider">
                   <span>ECC HANDSHAKE CODE:</span>
                   <span className="text-white font-bold">{encryptionMatrix}</span>
                 </div>
-                <div className="flex justify-between text-[10px]">
+                <div className="flex justify-between text-xs font-semibold tracking-wider">
                   <span>MFA CIPHER SHARD:</span>
                   <span className="text-neutral-500 font-semibold uppercase">{activePortal?.mfaEnabled ? "Key Matched OK" : "Muted"}</span>
                 </div>
-                <div className="flex justify-between text-[10px]">
+                <div className="flex justify-between text-xs font-semibold tracking-wider">
                   <span>SESSION IP AUTH:</span>
                   <span className="text-amber-500 font-semibold truncate max-w-[130px]">188.40.23.11</span>
                 </div>
@@ -1127,7 +1127,7 @@ export default function ClientSandbox({
               <span className="text-[9px] font-mono bg-neutral-900 text-neutral-500 px-1.5 rounded">REAL-TIME</span>
             </div>
 
-            <div className="bg-neutral-950/60 border border-neutral-900 rounded-md p-3 font-mono text-[10px] space-y-2 h-44 overflow-y-auto text-left">
+            <div className="bg-neutral-950/60 border border-neutral-900 rounded-md p-3 font-mono text-xs font-semibold tracking-wider space-y-2 h-44 overflow-y-auto text-left">
               {localAuditLogs.length === 0 ? (
                 <div className="py-12 text-center text-neutral-600 italic">Locker pipeline is clean. Waiting for events...</div>
               ) : (
@@ -1140,7 +1140,7 @@ export default function ClientSandbox({
               )}
             </div>
             
-            <p className="text-[10px] font-mono text-neutral-500 italic leading-snug">
+            <p className="text-xs font-semibold tracking-wider font-mono text-neutral-500 italic leading-snug">
               Each customer activity is hashed and signed on server-side nodes to guarantee immutable creative delivery compliance records.
             </p>
           </div>

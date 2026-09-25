@@ -257,7 +257,7 @@ export default function App() {
             <span>CLIENT CV VALUE:</span>
             <span className="text-white font-semibold">${(totalContractBudgets / 1000).toFixed(0)}k</span>
           </div>
-          <div className="pt-2 text-[11px] text-neutral-500 leading-normal">
+          <div className="pt-2 text-xs font-semibold text-neutral-500 leading-normal">
             MotionScale OS Framework v2.0 • Luxury Zen Editorial Edition
           </div>
         </div>
@@ -352,7 +352,7 @@ export default function App() {
           <div className="bg-[#111113] border border-[#27272A] w-full max-w-md p-8 relative shadow-2xl">
             <button
               onClick={() => setIsAdminPassModalOpen(false)}
-              className="absolute top-4 right-4 text-zinc-500 hover:text-zinc-200 transition-colors cursor-pointer"
+              className="absolute top-4 right-4 text-zinc-300 hover:text-zinc-200 transition-colors cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>

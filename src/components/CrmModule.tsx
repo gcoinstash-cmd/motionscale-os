@@ -182,7 +182,7 @@ export default function CrmModule({ portals, projects, onAddPortal, onUpdatePort
         <div className="lg:col-span-5 bg-neutral-950 border border-neutral-900 rounded-lg overflow-hidden flex flex-col">
           <div className="p-4 bg-neutral-900/40 border-b border-neutral-900 flex items-center justify-between">
             <span className="text-xs font-mono text-[#a3a3a3] tracking-wide font-semibold uppercase">SECURED INTEGRATION MATRIX</span>
-            <span className="text-[10px] font-mono bg-neutral-900 text-neutral-400 px-2 py-0.5 rounded border border-neutral-800">
+            <span className="text-xs font-semibold tracking-wider font-mono bg-neutral-900 text-neutral-400 px-2 py-0.5 rounded border border-neutral-800">
               {portals.length} active
             </span>
           </div>
@@ -209,7 +209,7 @@ export default function CrmModule({ portals, projects, onAddPortal, onUpdatePort
 
                   <h3 className="font-sans font-medium text-white text-base mt-2">{portal.companyName}</h3>
                   
-                  <div className="flex items-center gap-4 text-[10px] font-mono text-neutral-400 mt-2.5">
+                  <div className="flex items-center gap-4 text-xs font-semibold tracking-wider font-mono text-neutral-400 mt-2.5">
                     <span className="flex items-center gap-0.5">
                       <span>CV: ${(portal.totalContractValue / 1000).toFixed(0)}k</span>
                     </span>
@@ -255,14 +255,14 @@ export default function CrmModule({ portals, projects, onAddPortal, onUpdatePort
 
               {/* Connected Active Project specs */}
               <div className="space-y-3">
-                <span className="text-[10px] font-mono text-neutral-400 dark:text-neutral-500 block uppercase tracking-[0.2em] font-semibold">Active Connected Deal Pipelines</span>
+                <span className="text-xs font-semibold tracking-wider font-mono text-neutral-400 dark:text-neutral-500 block uppercase tracking-[0.2em] font-semibold">Active Connected Deal Pipelines</span>
                 <div className="overflow-x-auto bg-neutral-950 border border-neutral-900 rounded-lg">
                   <table className="min-w-full text-xs font-mono text-neutral-300">
                     <thead className="bg-[#171717]/40 text-neutral-400 dark:text-neutral-500 border-b border-neutral-900 text-left">
                       <tr>
-                        <th className="py-4 px-6 text-[10px] tracking-wider uppercase font-semibold font-mono text-neutral-400 dark:text-neutral-500">Pipeline Campaign</th>
-                        <th className="py-4 px-6 text-[10px] tracking-wider uppercase font-semibold font-mono text-neutral-400 dark:text-neutral-500 text-center font-bold">Progress</th>
-                        <th className="py-4 px-6 text-[10px] tracking-wider uppercase font-semibold font-mono text-neutral-400 dark:text-neutral-500">Stage</th>
+                        <th className="py-4 px-6 text-xs font-semibold tracking-wider tracking-wider uppercase font-semibold font-mono text-neutral-400 dark:text-neutral-500">Pipeline Campaign</th>
+                        <th className="py-4 px-6 text-xs font-semibold tracking-wider tracking-wider uppercase font-semibold font-mono text-neutral-400 dark:text-neutral-500 text-center font-bold">Progress</th>
+                        <th className="py-4 px-6 text-xs font-semibold tracking-wider tracking-wider uppercase font-semibold font-mono text-neutral-400 dark:text-neutral-500">Stage</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-neutral-900/60">
@@ -298,7 +298,7 @@ export default function CrmModule({ portals, projects, onAddPortal, onUpdatePort
                               <td className="py-4 px-6">
                                 <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-neutral-900 bg-neutral-950/45">
                                   <span className={`w-1.5 h-1.5 rounded-full ${dotColor}`}></span>
-                                  <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-wider">{p.status}</span>
+                                  <span className="text-xs font-semibold tracking-wider font-mono text-neutral-400 uppercase tracking-wider">{p.status}</span>
                                 </div>
                               </td>
                             </tr>
@@ -321,7 +321,7 @@ export default function CrmModule({ portals, projects, onAddPortal, onUpdatePort
                   <button
                     onClick={() => triggerAuditVerification(selectedPortal.id)}
                     disabled={auditInProcess}
-                    className="bg-transparent hover:bg-neutral-900 text-white border border-neutral-800 hover:border-neutral-700 text-[10px] font-mono px-3 py-1.5 rounded disabled:opacity-50 transition-colors duration-200 flex items-center gap-1.5 self-start sm:self-auto"
+                    className="bg-transparent hover:bg-neutral-900 text-white border border-neutral-800 hover:border-neutral-700 text-xs font-semibold tracking-wider font-mono px-3 py-1.5 rounded disabled:opacity-50 transition-colors duration-200 flex items-center gap-1.5 self-start sm:self-auto"
                   >
                     <Cpu className={`w-3.5 h-3.5 ${auditInProcess ? "animate-spin text-neutral-400" : ""}`} />
                     <span>{auditInProcess ? "CALIBRATING PARAMETERS..." : "RUN NEURAL VULNERABILITY AUDIT"}</span>
@@ -336,14 +336,14 @@ export default function CrmModule({ portals, projects, onAddPortal, onUpdatePort
               {/* Live Terminal Security Logs */}
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono text-neutral-500 block uppercase tracking-widest flex items-center gap-1.5">
+                  <span className="text-xs font-semibold tracking-wider font-mono text-neutral-500 block uppercase tracking-widest flex items-center gap-1.5">
                     <Terminal className="w-3.5 h-3.5" />
                     <span>Gateway Security Log Audit Stream</span>
                   </span>
                   <span className="text-[9px] text-[#22c55e] font-mono bg-[#14532d]/40 px-1.5 rounded border border-[#166534]">SECURED LINK</span>
                 </div>
 
-                <div className="bg-neutral-950 border border-neutral-900 p-4 rounded-lg font-mono text-[11px] h-48 overflow-y-auto space-y-2 text-left">
+                <div className="bg-neutral-950 border border-neutral-900 p-4 rounded-lg font-mono text-xs font-semibold h-48 overflow-y-auto space-y-2 text-left">
                   {selectedPortal.securityLogs?.map((log, index) => (
                     <div key={index} className="text-neutral-400 border-b border-neutral-900 pb-1 flex items-start gap-1">
                       <span className="text-[#a3a3a3] select-none">&gt;</span>
@@ -360,11 +360,11 @@ export default function CrmModule({ portals, projects, onAddPortal, onUpdatePort
                     value={newLogText}
                     onChange={(e) => setNewLogText(e.target.value)}
                     placeholder="Manually deploy secure authorization signature note..."
-                    className="flex-1 bg-neutral-905 border border-neutral-900 rounded px-3 py-2 text-[11px] text-white focus:outline-none focus:border-neutral-700 font-mono"
+                    className="flex-1 bg-neutral-905 border border-neutral-900 rounded px-3 py-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-700 font-mono"
                   />
                   <button
                     type="submit"
-                    className="bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 text-white px-4 py-2 font-medium"
+                    className="bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 text-white px-5 py-3 min-h-[44px] font-medium"
                   >
                     LOG SIGNATURE
                   </button>
@@ -393,35 +393,35 @@ export default function CrmModule({ portals, projects, onAddPortal, onUpdatePort
 
             <form onSubmit={handleCreatePortalSubmit} className="space-y-4">
               <div className="space-y-1">
-                <label className="text-[10px] text-neutral-500 block uppercase">CLIENT COMPANY NAME</label>
+                <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase">CLIENT COMPANY NAME</label>
                 <input 
                   type="text" 
                   required
                   value={newPortal.companyName}
                   onChange={(e) => setNewPortal({ ...newPortal, companyName: e.target.value })}
                   placeholder="e.g. Vance Capital Group"
-                  className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                  className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <label className="text-[10px] text-neutral-500 block uppercase">TOTAL CONTRACT VALUE ($)</label>
+                  <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase">TOTAL CONTRACT VALUE ($)</label>
                   <input 
                     type="number" 
                     required
                     value={newPortal.totalContractValue}
                     onChange={(e) => setNewPortal({ ...newPortal, totalContractValue: Number(e.target.value) })}
-                    className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                    className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                   />
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[10px] text-neutral-500 block uppercase">INITIAL MFA STATE</label>
+                  <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase">INITIAL MFA STATE</label>
                   <select 
                     value={newPortal.mfaEnabled ? "true" : "false"}
                     onChange={(e) => setNewPortal({ ...newPortal, mfaEnabled: e.target.value === "true" })}
-                    className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                    className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                   >
                     <option value="true">Enable MFA Shard</option>
                     <option value="false">Lock without MFA</option>
@@ -430,13 +430,13 @@ export default function CrmModule({ portals, projects, onAddPortal, onUpdatePort
               </div>
 
               <div className="space-y-1">
-                <label className="text-[10px] text-neutral-500 block uppercase">INITIAL SYSTEM EVENT INSIGHT NOTE</label>
+                <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase">INITIAL SYSTEM EVENT INSIGHT NOTE</label>
                 <textarea 
                   rows={2} 
                   value={newPortal.initialLog}
                   onChange={(e) => setNewPortal({ ...newPortal, initialLog: e.target.value })}
                   placeholder="e.g. Secured cloud gateway validated, primary administrator email checked."
-                  className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                  className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                 />
               </div>
 
@@ -450,7 +450,7 @@ export default function CrmModule({ portals, projects, onAddPortal, onUpdatePort
                 </button>
                 <button
                   type="submit"
-                  className="bg-white text-black hover:bg-neutral-200 px-4 py-2 rounded font-semibold"
+                  className="bg-white text-black hover:bg-neutral-200 px-5 py-3 min-h-[44px] rounded font-semibold"
                 >
                   ONBOARD VAULT PORTAL
                 </button>

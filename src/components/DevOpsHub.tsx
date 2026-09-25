@@ -144,7 +144,7 @@ export default function DevOpsHub() {
             {/* 1. Gemini Key Field */}
             <div className="space-y-2 bg-neutral-900/10 border border-neutral-900 p-4 rounded-md">
               <div className="flex justify-between items-center">
-                <label className="text-[10px] text-neutral-400 uppercase font-semibold tracking-wide flex items-center gap-1.5">
+                <label className="text-sm font-semibold tracking-wider text-neutral-400 uppercase font-semibold tracking-wide flex items-center gap-1.5">
                   <Sparkles className="w-3.5 h-3.5 text-amber-500" />
                   <span>Gemini API Token Access Key</span>
                 </label>
@@ -163,7 +163,7 @@ export default function DevOpsHub() {
                   value={geminiKey}
                   onChange={(e) => setGeminiKey(e.target.value)}
                   placeholder="e.g., AIzaSyD..."
-                  className="flex-1 bg-neutral-950 border border-neutral-850 rounded px-3 py-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                  className="flex-1 bg-neutral-950 border border-neutral-850 rounded px-3 py-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                 />
                 
                 {validationStates.gemini.status === "verified" || validationStates.gemini.status === "error" ? (
@@ -177,7 +177,7 @@ export default function DevOpsHub() {
                   <button
                     onClick={() => handleValidate("gemini")}
                     disabled={validationStates.gemini.status === "running"}
-                    className="bg-white hover:bg-neutral-200 text-black font-semibold px-4 py-2 rounded transition-colors flex items-center gap-1 uppercase text-[10px]"
+                    className="bg-white hover:bg-neutral-200 text-black font-semibold px-4 py-2 rounded transition-colors flex items-center gap-1 uppercase text-xs font-semibold tracking-wider"
                   >
                     {validationStates.gemini.status === "running" ? (
                       <RefreshCw className="w-3 h-3 animate-spin text-black" />
@@ -190,7 +190,7 @@ export default function DevOpsHub() {
 
               {/* Secure feedback stream */}
               {validationStates.gemini.log && (
-                <div className={`p-2.5 rounded font-mono text-[10px] mt-2 flex items-start gap-1.5 border ${
+                <div className={`p-2.5 rounded font-mono text-xs font-semibold tracking-wider mt-2 flex items-start gap-1.5 border ${
                   validationStates.gemini.status === "verified" 
                     ? "bg-emerald-950/15 border-emerald-900/30 text-emerald-400" 
                     : "bg-rose-950/15 border-rose-950 text-rose-400"
@@ -204,7 +204,7 @@ export default function DevOpsHub() {
             {/* 2. Stripe Webhook Secret */}
             <div className="space-y-2 bg-neutral-900/10 border border-neutral-900 p-4 rounded-md">
               <div className="flex justify-between items-center">
-                <label className="text-[10px] text-neutral-400 uppercase font-semibold tracking-wide flex items-center gap-1.5">
+                <label className="text-sm font-semibold tracking-wider text-neutral-400 uppercase font-semibold tracking-wide flex items-center gap-1.5">
                   <Webhook className="w-3.5 h-3.5 text-indigo-400" />
                   <span>Stripe Webhook Signing Secret</span>
                 </label>
@@ -223,7 +223,7 @@ export default function DevOpsHub() {
                   value={stripeSecret}
                   onChange={(e) => setStripeSecret(e.target.value)}
                   placeholder="e.g., whsec_..."
-                  className="flex-1 bg-neutral-950 border border-neutral-850 rounded px-3 py-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                  className="flex-1 bg-neutral-950 border border-neutral-850 rounded px-3 py-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                 />
                 
                 {validationStates.stripe.status === "verified" || validationStates.stripe.status === "error" ? (
@@ -237,7 +237,7 @@ export default function DevOpsHub() {
                   <button
                     onClick={() => handleValidate("stripe")}
                     disabled={validationStates.stripe.status === "running"}
-                    className="bg-white hover:bg-neutral-200 text-black font-semibold px-4 py-2 rounded transition-colors flex items-center gap-1 uppercase text-[10px]"
+                    className="bg-white hover:bg-neutral-200 text-black font-semibold px-4 py-2 rounded transition-colors flex items-center gap-1 uppercase text-xs font-semibold tracking-wider"
                   >
                     {validationStates.stripe.status === "running" ? (
                       <RefreshCw className="w-3 h-3 animate-spin text-black" />
@@ -250,7 +250,7 @@ export default function DevOpsHub() {
 
               {/* Secure feedback stream */}
               {validationStates.stripe.log && (
-                <div className={`p-2.5 rounded font-mono text-[10px] mt-2 flex items-start gap-1.5 border ${
+                <div className={`p-2.5 rounded font-mono text-xs font-semibold tracking-wider mt-2 flex items-start gap-1.5 border ${
                   validationStates.stripe.status === "verified" 
                     ? "bg-emerald-950/15 border-emerald-900/30 text-emerald-400" 
                     : "bg-rose-950/15 border-rose-950 text-rose-400"
@@ -264,7 +264,7 @@ export default function DevOpsHub() {
             {/* 3. AWS S3 Bucket ARN */}
             <div className="space-y-2 bg-neutral-900/10 border border-neutral-900 p-4 rounded-md">
               <div className="flex justify-between items-center">
-                <label className="text-[10px] text-neutral-400 uppercase font-semibold tracking-wide flex items-center gap-1.5">
+                <label className="text-sm font-semibold tracking-wider text-neutral-400 uppercase font-semibold tracking-wide flex items-center gap-1.5">
                   <Database className="w-3.5 h-3.5 text-rose-400" />
                   <span>AWS S3 High-Fidelity Bucket ARN</span>
                 </label>
@@ -283,7 +283,7 @@ export default function DevOpsHub() {
                   value={awsArn}
                   onChange={(e) => setAwsArn(e.target.value)}
                   placeholder="e.g., arn:aws:s3:::motionscale-high-res"
-                  className="flex-1 bg-neutral-950 border border-neutral-850 rounded px-3 py-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                  className="flex-1 bg-neutral-950 border border-neutral-850 rounded px-3 py-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                 />
                 
                 {validationStates.aws.status === "verified" || validationStates.aws.status === "error" ? (
@@ -297,7 +297,7 @@ export default function DevOpsHub() {
                   <button
                     onClick={() => handleValidate("aws")}
                     disabled={validationStates.aws.status === "running"}
-                    className="bg-white hover:bg-neutral-200 text-black font-semibold px-4 py-2 rounded transition-colors flex items-center gap-1 uppercase text-[10px]"
+                    className="bg-white hover:bg-neutral-200 text-black font-semibold px-4 py-2 rounded transition-colors flex items-center gap-1 uppercase text-xs font-semibold tracking-wider"
                   >
                     {validationStates.aws.status === "running" ? (
                       <RefreshCw className="w-3 h-3 animate-spin text-black" />
@@ -310,7 +310,7 @@ export default function DevOpsHub() {
 
               {/* Secure feedback stream */}
               {validationStates.aws.log && (
-                <div className={`p-2.5 rounded font-mono text-[10px] mt-2 flex items-start gap-1.5 border ${
+                <div className={`p-2.5 rounded font-mono text-xs font-semibold tracking-wider mt-2 flex items-start gap-1.5 border ${
                   validationStates.aws.status === "verified" 
                     ? "bg-emerald-950/15 border-emerald-900/30 text-emerald-400" 
                     : "bg-rose-950/15 border-rose-950 text-rose-400"
@@ -330,14 +330,14 @@ export default function DevOpsHub() {
               <Activity className="w-4 h-4 text-emerald-400" />
               <h3 className="text-xs font-mono text-white tracking-widest uppercase">System Data Flow Map</h3>
             </div>
-            <span className="text-[10px] font-mono text-neutral-500">Live Architecture</span>
+            <span className="text-xs font-semibold tracking-wider font-mono text-neutral-500">Live Architecture</span>
           </div>
 
           <p className="text-xs text-neutral-400 leading-relaxed font-sans">
             Bespoke corporate data sequence schematic tracing high-value container states. All nodes employ <strong>isolated containment rules</strong> so that internal systems are decoupled from client clients.
           </p>
 
-          <div className="space-y-4 font-mono text-[11px] leading-relaxed">
+          <div className="space-y-4 font-mono text-xs font-semibold leading-relaxed">
             
             {/* Box 1: Client Onboarding Workspace */}
             <div className="border border-neutral-900 rounded bg-neutral-950 p-4.5 space-y-2 relative">
@@ -477,7 +477,7 @@ export default function DevOpsHub() {
 
               <div className="flex gap-2">
                 <span className="text-[9px] font-mono bg-emerald-950/20 text-emerald-400 border border-emerald-900/40 px-2 py-0.5 rounded font-bold uppercase shrink-0 h-fit mt-1">STATUS</span>
-                <p className="text-[11px] text-neutral-500">
+                <p className="text-xs font-semibold text-neutral-500">
                   CRM profiles trigger automated webhook signals that notify whitelisted Slack/Teams channels to streamline luxury studio resources under optimal parameters.
                 </p>
               </div>
@@ -498,7 +498,7 @@ export default function DevOpsHub() {
                   <span className="text-[9px] text-neutral-600">SCHEMATIC v2_CYPHER</span>
                 </div>
                 <div>// AWS IAM Sandbox Policy configuration setup structure:</div>
-                <pre className="text-white bg-neutral-900 p-3 rounded overflow-x-auto text-[10px] leading-relaxed">
+                <pre className="text-white bg-neutral-900 p-3 rounded overflow-x-auto text-xs font-semibold tracking-wider leading-relaxed">
 {`{
   "Version": "2012-10-17",
   "Statement": [
@@ -517,7 +517,7 @@ export default function DevOpsHub() {
 
               <div className="flex gap-2">
                 <span className="text-[9px] font-mono bg-emerald-950/20 text-emerald-400 border border-emerald-900/40 px-2 py-0.5 rounded font-bold uppercase shrink-0 h-fit mt-1">IMPORTANT</span>
-                <p className="text-[11px] text-neutral-500">
+                <p className="text-xs font-semibold text-neutral-500">
                   The AWS security boundary applies automatic block parameters unless signature clearance conditions on the custom Billing Ledger are explicitly satisfied.
                 </p>
               </div>
@@ -545,7 +545,7 @@ export default function DevOpsHub() {
 
               <div className="flex gap-2">
                 <span className="text-[9px] font-mono bg-emerald-950/20 text-emerald-400 border border-emerald-900/40 px-2 py-0.5 rounded font-bold uppercase shrink-0 h-fit mt-1">COMPLIANCE</span>
-                <p className="text-[11px] text-neutral-500">
+                <p className="text-xs font-semibold text-neutral-500">
                   Transactions require instant webhook updates to keep real-time operational dashboard risk ratings in perfect alignment with active bank ledger events.
                 </p>
               </div>

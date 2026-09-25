@@ -275,11 +275,11 @@ An active invoice clearing bottleneck exists: **$${totalOverdueAmount.toLocaleSt
           <div className="space-y-4 font-mono text-xs">
             {/* 1. Project Dropdown */}
             <div className="space-y-1.5">
-              <label className="text-[10px] text-neutral-400 block uppercase tracking-wider font-semibold">Select Target Project Container</label>
+              <label className="text-sm font-semibold tracking-wider text-neutral-400 block uppercase tracking-wider font-semibold">Select Target Project Container</label>
               <select
                 value={selectedProjectId}
                 onChange={(e) => setSelectedProjectId(e.target.value)}
-                className="w-full bg-neutral-900 border border-neutral-850 rounded p-2.5 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                className="w-full bg-neutral-900 border border-neutral-850 rounded p-2.5 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
               >
                 {projects.map((p) => (
                   <option key={p.id} value={p.id}>
@@ -291,7 +291,7 @@ An active invoice clearing bottleneck exists: **$${totalOverdueAmount.toLocaleSt
 
             {/* 2. Task Selector */}
             <div className="space-y-1.5">
-              <label className="text-[10px] text-neutral-400 block uppercase tracking-wider font-semibold">Identify AI Objective Task Type</label>
+              <label className="text-sm font-semibold tracking-wider text-neutral-400 block uppercase tracking-wider font-semibold">Identify AI Objective Task Type</label>
               <div className="grid grid-cols-2 gap-2">
                 <button
                   type="button"
@@ -302,7 +302,7 @@ An active invoice clearing bottleneck exists: **$${totalOverdueAmount.toLocaleSt
                       : "border-neutral-900 bg-neutral-900/30 text-neutral-400 hover:border-neutral-800"
                   }`}
                 >
-                  <span className="font-semibold text-[11px] block text-white">Video Script spec</span>
+                  <span className="font-semibold text-xs font-semibold block text-white">Video Script spec</span>
                   <span className="text-[9px] text-neutral-500 leading-normal">Draft high-end creative script blueprints</span>
                 </button>
 
@@ -315,7 +315,7 @@ An active invoice clearing bottleneck exists: **$${totalOverdueAmount.toLocaleSt
                       : "border-neutral-900 bg-neutral-900/30 text-neutral-400 hover:border-neutral-800"
                   }`}
                 >
-                  <span className="font-semibold text-[11px] block text-white">CFO Cashflow Audit</span>
+                  <span className="font-semibold text-xs font-semibold block text-white">CFO Cashflow Audit</span>
                   <span className="text-[9px] text-neutral-500 leading-normal">Solve risk diagnostics & overdue balances</span>
                 </button>
               </div>
@@ -323,7 +323,7 @@ An active invoice clearing bottleneck exists: **$${totalOverdueAmount.toLocaleSt
 
             {/* 3. Text Area Custom Directives */}
             <div className="space-y-1.5">
-              <label className="text-[10px] text-neutral-400 block uppercase tracking-wider font-semibold">Bescope Directives / Guidelines</label>
+              <label className="text-sm font-semibold tracking-wider text-neutral-400 block uppercase tracking-wider font-semibold">Bescope Directives / Guidelines</label>
               <textarea
                 value={userDirective}
                 onChange={(e) => setUserDirective(e.target.value)}
@@ -333,7 +333,7 @@ An active invoice clearing bottleneck exists: **$${totalOverdueAmount.toLocaleSt
                     : "e.g., Suggest specific cost-cutting rendering options and detail penalty timelines..."
                 }
                 rows={4}
-                className="w-full bg-neutral-900 border border-neutral-850 rounded p-2.5 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono resize-none leading-relaxed"
+                className="w-full bg-neutral-900 border border-neutral-850 rounded p-2.5 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono resize-none leading-relaxed"
               />
               <span className="text-[9px] text-neutral-500 font-mono block leading-normal leading-snug">
                 These constraints inject custom vectors directly into the active Gemini contextual model loop.
@@ -360,8 +360,8 @@ An active invoice clearing bottleneck exists: **$${totalOverdueAmount.toLocaleSt
             <div className="bg-rose-950/25 border border-rose-900/40 p-4 rounded text-xs font-mono space-y-2 flex items-start gap-2.5">
               <ShieldAlert className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
               <div>
-                <span className="text-white font-bold block uppercase text-[10px]">CFO ALERT: INTERLOCK ACTIVE</span>
-                <p className="text-[11px] text-neutral-300 mt-1 leading-relaxed">
+                <span className="text-white font-bold block uppercase text-xs font-semibold tracking-wider">CFO ALERT: INTERLOCK ACTIVE</span>
+                <p className="text-xs font-semibold text-neutral-300 mt-1 leading-relaxed">
                   Currently flagging **$${totalOverdueAmount.toLocaleString()}** Overdue items. Running the **Predictive CFO Cashflow Audit** task will automatically inject ledger details and resolve a defense strategy.
                 </p>
               </div>
@@ -383,7 +383,7 @@ An active invoice clearing bottleneck exists: **$${totalOverdueAmount.toLocaleSt
               <div className="flex gap-2">
                 <button
                   onClick={handleCopyReport}
-                  className="bg-neutral-950 hover:bg-neutral-900 border border-neutral-850 hover:text-white text-neutral-400 hover:border-neutral-700 px-2.5 py-1 rounded text-[10px] font-mono flex items-center gap-1.5 transition-all"
+                  className="bg-neutral-950 hover:bg-neutral-900 border border-neutral-850 hover:text-white text-neutral-400 hover:border-neutral-700 px-2.5 py-1 rounded text-base font-semibold min-h-[44px] font-semibold tracking-wider font-mono flex items-center gap-1.5 transition-all"
                 >
                   {isCopied ? (
                     <>
@@ -403,7 +403,7 @@ An active invoice clearing bottleneck exists: **$${totalOverdueAmount.toLocaleSt
                     setExecutionLogs([]);
                     setStepIndex(-1);
                   }}
-                  className="bg-neutral-950 hover:bg-neutral-900 border border-neutral-850 hover:text-white text-neutral-400 hover:border-neutral-700 px-2 text-[10px] icon-only pr-2.5 pl-2.5 rounded transition-all"
+                  className="bg-neutral-950 hover:bg-neutral-900 border border-neutral-850 hover:text-white text-neutral-400 hover:border-neutral-700 px-2 text-xs font-semibold tracking-wider icon-only pr-2.5 pl-2.5 rounded transition-all"
                 >
                   <RotateCcw className="w-3 h-3 text-neutral-500" />
                 </button>
@@ -412,7 +412,7 @@ An active invoice clearing bottleneck exists: **$${totalOverdueAmount.toLocaleSt
           </div>
 
           {/* Terminal Screen area */}
-          <div className="flex-1 p-5 font-mono text-[11px] leading-relaxed overflow-y-auto space-y-4 max-h-[450px]">
+          <div className="flex-1 p-5 font-mono text-xs font-semibold leading-relaxed overflow-y-auto space-y-4 max-h-[450px]">
             
             {/* If idle */}
             {!isExecuting && !finalReport && (
@@ -420,7 +420,7 @@ An active invoice clearing bottleneck exists: **$${totalOverdueAmount.toLocaleSt
                 <Terminal className="w-8 h-8 text-neutral-700 animate-pulse-subtle" />
                 <div className="space-y-1">
                   <span className="text-xs font-bold text-neutral-400 block tracking-wider uppercase font-mono">CO-PROCESSOR SLEEPING</span>
-                  <p className="max-w-md text-[10px] text-neutral-500 leading-normal font-mono">
+                  <p className="max-w-md text-xs font-semibold tracking-wider text-neutral-500 leading-normal font-mono">
                     Select target variables and execute the agent thread to observe the live machine learning logic and compile output telemetry.
                   </p>
                 </div>
@@ -482,7 +482,7 @@ An active invoice clearing bottleneck exists: **$${totalOverdueAmount.toLocaleSt
           </div>
 
           {/* Terminal Bottom Diagnostic stats */}
-          <div className="px-4 py-2.5 bg-neutral-950 border-t border-neutral-900 font-mono text-[10px] text-neutral-600 flex justify-between">
+          <div className="px-4 py-2.5 bg-neutral-950 border-t border-neutral-900 font-mono text-xs font-semibold tracking-wider text-neutral-600 flex justify-between">
             <span>TERMINAL CONSTRAINTS: ECC-256</span>
             <span>NODE: {selectedProject ? selectedProject.id.toUpperCase() : "NULL"} • MEM: SECURE_STACK</span>
           </div>

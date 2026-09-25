@@ -193,7 +193,7 @@ export default function SprintManager({
               <div className="border-b border-neutral-900 pb-2 mb-3">
                 <div className="flex items-center justify-between">
                   <h3 className="text-xs font-mono font-medium text-white tracking-wide uppercase truncate max-w-[80%]">{stage.label}</h3>
-                  <span className="text-[10px] font-mono bg-neutral-900 text-neutral-400 px-2 py-0.5 rounded border border-neutral-800">
+                  <span className="text-xs font-semibold tracking-wider font-mono bg-neutral-900 text-neutral-400 px-2 py-0.5 rounded border border-neutral-800">
                     {matchedProjects.length}
                   </span>
                 </div>
@@ -244,7 +244,7 @@ export default function SprintManager({
                           <h4 className="text-xs font-sans text-neutral-200 leading-snug font-medium group-hover:text-white transition-colors">
                             {p.name}
                           </h4>
-                          <span className="text-[10px] text-neutral-400 font-mono block">Client: {p.clientName}</span>
+                          <span className="text-xs font-semibold tracking-wider text-neutral-400 font-mono block">Client: {p.clientName}</span>
                         </div>
 
                         {/* Pipeline Preflight Compliance Checklist on card */}
@@ -266,7 +266,7 @@ export default function SprintManager({
 
                       {/* Interactive Progress Bar Sliders */}
                       <div className="space-y-1.5 pt-1.5 border-t border-neutral-900/80">
-                        <div className="flex items-center justify-between text-[10px] font-mono text-neutral-500">
+                        <div className="flex items-center justify-between text-xs font-semibold tracking-wider font-mono text-neutral-500">
                           <span className="flex items-center gap-1">
                             <Percent className="w-2.5 h-2.5" />
                             <span>PROGRESS:</span>
@@ -335,60 +335,60 @@ export default function SprintManager({
 
             <form onSubmit={handleCreateProjectSubmit} className="space-y-4 text-xs font-mono">
               <div className="space-y-1">
-                <label className="text-[10px] text-neutral-500 block uppercase">PROJECT CAMPAIGN NAME</label>
+                <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase">PROJECT CAMPAIGN NAME</label>
                 <input 
                   type="text" 
                   required
                   value={newProject.name}
                   onChange={(e) => setNewProject({ ...newProject, name: e.target.value })}
                   placeholder="e.g. Acme Inc Cyberpunk 3D Character Film"
-                  className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                  className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <label className="text-[10px] text-neutral-500 block uppercase">CLIENT COMPANY</label>
+                  <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase">CLIENT COMPANY</label>
                   <input 
                     type="text" 
                     required
                     value={newProject.clientName}
                     onChange={(e) => setNewProject({ ...newProject, clientName: e.target.value })}
                     placeholder="e.g. Sterling Luxury"
-                    className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                    className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                   />
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[10px] text-neutral-500 block uppercase">DELIVERY DEADLINE</label>
+                  <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase">DELIVERY DEADLINE</label>
                   <input 
                     type="date" 
                     required
                     value={newProject.deliveryDate}
                     onChange={(e) => setNewProject({ ...newProject, deliveryDate: e.target.value })}
-                    className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                    className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <label className="text-[10px] text-neutral-500 block uppercase">CONTRACT BUDGET ($)</label>
+                  <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase">CONTRACT BUDGET ($)</label>
                   <input 
                     type="number" 
                     required
                     value={newProject.budget}
                     onChange={(e) => setNewProject({ ...newProject, budget: Number(e.target.value) })}
-                    className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                    className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                   />
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[10px] text-neutral-500 block uppercase">ASSIGNED LEAD</label>
+                  <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase">ASSIGNED LEAD</label>
                   <select 
                     value={newProject.animatorId}
                     onChange={(e) => setNewProject({ ...newProject, animatorId: e.target.value })}
-                    className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                    className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                   >
                     <option value="Diana Prince">Diana Prince</option>
                     <option value="Tony Stark">Tony Stark</option>
@@ -400,11 +400,11 @@ export default function SprintManager({
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <label className="text-[10px] text-neutral-500 block uppercase">PREDICTIVE DELAY RISK</label>
+                  <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase">PREDICTIVE DELAY RISK</label>
                   <select 
                     value={newProject.predictiveDelayRisk}
                     onChange={(e) => setNewProject({ ...newProject, predictiveDelayRisk: e.target.value as ProjectMetrics["predictiveDelayRisk"] })}
-                    className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                    className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                   >
                     <option value="Low">Low Risk</option>
                     <option value="Medium">Medium Risk</option>
@@ -413,23 +413,23 @@ export default function SprintManager({
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[10px] text-neutral-500 block uppercase">EST. RENDER TIME</label>
+                  <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase">EST. RENDER TIME</label>
                   <input 
                     type="text" 
                     value={newProject.renderTimeEstimate}
                     onChange={(e) => setNewProject({ ...newProject, renderTimeEstimate: e.target.value })}
                     placeholder="e.g. 12 hrs"
-                    className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                    className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                   />
                 </div>
               </div>
 
               <div className="space-y-1">
-                <label className="text-[10px] text-neutral-500 block uppercase">INITIAL PIPELINE STAGE</label>
+                <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase">INITIAL PIPELINE STAGE</label>
                 <select 
                   value={newProject.status}
                   onChange={(e) => setNewProject({ ...newProject, status: e.target.value as Project["status"] })}
-                  className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                  className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                 >
                   <option value="Scripting">Scripting</option>
                   <option value="Storyboarding">Storyboarding</option>
@@ -448,7 +448,7 @@ export default function SprintManager({
                 </button>
                 <button
                   type="submit"
-                  className="bg-white text-black hover:bg-neutral-200 px-4 py-2 rounded font-semibold"
+                  className="bg-white text-black hover:bg-neutral-200 px-5 py-3 min-h-[44px] rounded font-semibold"
                 >
                   DISPATCH TO PIPELINE
                 </button>

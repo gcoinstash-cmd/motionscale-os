@@ -287,7 +287,7 @@ export default function ExecutiveDashboard({
                 <div className="font-mono font-medium text-white block">
                   {studioOutputData[analyticsHoverIndex].month} Output Metrics
                 </div>
-                <div className="mt-1.5 space-y-1 font-mono text-[11px]">
+                <div className="mt-1.5 space-y-1 font-mono text-xs font-semibold">
                   <div className="flex justify-between gap-8 text-neutral-400">
                     <span>Base Output:</span> 
                     <span className="text-neutral-300 font-medium">${studioOutputData[analyticsHoverIndex].standard.toLocaleString()}</span>
@@ -296,7 +296,7 @@ export default function ExecutiveDashboard({
                     <span>MotionScale OS:</span> 
                     <span className="text-white">${studioOutputData[analyticsHoverIndex].specialized.toLocaleString()}</span>
                   </div>
-                  <div className="text-[10px] text-amber-400 pt-1 border-t border-neutral-800 mt-1">
+                  <div className="text-xs font-semibold tracking-wider text-amber-400 pt-1 border-t border-neutral-800 mt-1">
                     {studioOutputData[analyticsHoverIndex].details}
                   </div>
                 </div>
@@ -304,7 +304,7 @@ export default function ExecutiveDashboard({
             )}
           </div>
           
-          <div className="flex justify-between items-center text-[11px] font-mono text-neutral-500 pt-4 border-t border-neutral-900 mt-2">
+          <div className="flex justify-between items-center text-xs font-semibold font-mono text-neutral-500 pt-4 border-t border-neutral-900 mt-2">
             <span>Graph engine: Vector-scalable responsive Canvas</span>
             <span className="text-[#a3a3a3]">Rendering metrics aligned</span>
           </div>

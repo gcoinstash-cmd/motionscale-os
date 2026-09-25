@@ -188,7 +188,7 @@ ${finalReportText}`;
         <div className="flex gap-3">
           <button
             onClick={handleExportCSV}
-            className="border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white px-3 py-2 rounded text-xs font-mono flex items-center gap-1.5 transition-colors duration-200"
+            className="border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white px-3 py-2 rounded text-base font-semibold min-h-[44px] font-mono flex items-center gap-1.5 transition-colors duration-200"
           >
             <Download className="w-3.5 h-3.5 text-neutral-400" />
             <span>EXPORT CSV DATA</span>
@@ -208,30 +208,30 @@ ${finalReportText}`;
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs font-mono">
         {/* Cleared Funds */}
         <div className="bg-neutral-950 border border-neutral-900 rounded-lg p-5">
-          <span className="text-[10px] text-neutral-500 block uppercase tracking-widest mb-1">Cleared Earnings</span>
+          <span className="text-xs font-semibold tracking-wider text-neutral-500 block uppercase tracking-widest mb-1">Cleared Earnings</span>
           <span className="text-xl text-white font-medium block mt-1.5">${paidInvoicesTotal.toLocaleString()} USD</span>
-          <span className="text-[10px] text-emerald-400 block mt-2">● Legitimate reserves secured</span>
+          <span className="text-xs font-semibold tracking-wider text-emerald-400 block mt-2">● Legitimate reserves secured</span>
         </div>
 
         {/* Outstanding funds */}
         <div className="bg-neutral-950 border border-neutral-900 rounded-lg p-5">
-          <span className="text-[10px] text-neutral-500 block uppercase tracking-widest mb-1">Accounts Outstanding</span>
+          <span className="text-xs font-semibold tracking-wider text-neutral-500 block uppercase tracking-widest mb-1">Accounts Outstanding</span>
           <span className="text-xl text-white font-medium block mt-1.5">${outstandingInvoicesTotal.toLocaleString()} USD</span>
-          <span className="text-[10px] text-amber-500 block mt-2">● Accounts receivable tracked</span>
+          <span className="text-xs font-semibold tracking-wider text-amber-500 block mt-2">● Accounts receivable tracked</span>
         </div>
 
         {/* Pipeline Value */}
         <div className="bg-neutral-950 border border-neutral-900 rounded-lg p-5">
-          <span className="text-[10px] text-neutral-500 block uppercase tracking-widest mb-1">Total Pipeline Budgets</span>
+          <span className="text-xs font-semibold tracking-wider text-neutral-500 block uppercase tracking-widest mb-1">Total Pipeline Budgets</span>
           <span className="text-xl text-white font-medium block mt-1.5">${totalContractBudgets.toLocaleString()} USD</span>
-          <span className="text-[10px] text-blue-400 block mt-2">Linked to active studio projects</span>
+          <span className="text-xs font-semibold tracking-wider text-blue-400 block mt-2">Linked to active studio projects</span>
         </div>
 
         {/* Studio Capacity Estimate */}
         <div className="bg-neutral-950 border border-neutral-900 rounded-lg p-5">
-          <span className="text-[10px] text-neutral-500 block uppercase tracking-widest mb-1">Operating Overhead Buffer</span>
+          <span className="text-xs font-semibold tracking-wider text-neutral-500 block uppercase tracking-widest mb-1">Operating Overhead Buffer</span>
           <span className="text-xl text-neutral-400 font-medium block mt-1.5">$11,400 USD</span>
-          <span className="text-[10px] text-[#737373] block mt-2">Retainer allocation index</span>
+          <span className="text-xs font-semibold tracking-wider text-[#737373] block mt-2">Retainer allocation index</span>
         </div>
       </div>
 
@@ -248,7 +248,7 @@ ${finalReportText}`;
               <select 
                 value={activeStatusFilter}
                 onChange={(e) => setActiveStatusFilter(e.target.value)}
-                className="bg-neutral-950/85 text-neutral-400 border border-neutral-800 rounded px-2.5 py-1 text-[11px] font-mono focus:outline-none"
+                className="bg-neutral-950/85 text-neutral-400 border border-neutral-800 rounded px-2.5 py-1 text-xs font-semibold font-mono focus:outline-none"
               >
                 <option value="all">ALL CLEARING ACTIONS</option>
                 <option value="Paid">Paid & Cleared</option>
@@ -263,11 +263,11 @@ ${finalReportText}`;
             <table className="min-w-full text-xs font-mono text-neutral-300">
               <thead className="bg-neutral-950/40 text-neutral-400 dark:text-neutral-500 border-b border-neutral-900 text-left">
                 <tr>
-                  <th className="py-4 px-6 text-[10px] tracking-wider uppercase font-semibold font-mono text-neutral-400 dark:text-neutral-500">Invoice Num</th>
-                  <th className="py-4 px-6 text-[10px] tracking-wider uppercase font-semibold font-mono text-neutral-400 dark:text-neutral-500">Project Campaign</th>
-                  <th className="py-4 px-6 text-[10px] tracking-wider uppercase font-semibold font-mono text-neutral-400 dark:text-neutral-500">Due Date</th>
-                  <th className="py-4 px-6 text-[10px] tracking-wider uppercase font-semibold font-mono text-neutral-400 dark:text-neutral-500">Status</th>
-                  <th className="py-4 px-6 text-[10px] tracking-wider uppercase font-semibold font-mono text-neutral-400 dark:text-neutral-500 text-right">Value USD</th>
+                  <th className="py-4 px-6 text-xs font-semibold tracking-wider tracking-wider uppercase font-semibold font-mono text-neutral-400 dark:text-neutral-500">Invoice Num</th>
+                  <th className="py-4 px-6 text-xs font-semibold tracking-wider tracking-wider uppercase font-semibold font-mono text-neutral-400 dark:text-neutral-500">Project Campaign</th>
+                  <th className="py-4 px-6 text-xs font-semibold tracking-wider tracking-wider uppercase font-semibold font-mono text-neutral-400 dark:text-neutral-500">Due Date</th>
+                  <th className="py-4 px-6 text-xs font-semibold tracking-wider tracking-wider uppercase font-semibold font-mono text-neutral-400 dark:text-neutral-500">Status</th>
+                  <th className="py-4 px-6 text-xs font-semibold tracking-wider tracking-wider uppercase font-semibold font-mono text-neutral-400 dark:text-neutral-500 text-right">Value USD</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-neutral-900/60">
@@ -290,17 +290,17 @@ ${finalReportText}`;
                       <td className="py-4 px-6">
                         <div>
                           <span className="block font-sans font-medium text-neutral-200">{p?.name || "Acme Video Reveal"}</span>
-                          <span className="text-[10px] text-neutral-500">Client: {p?.clientName || "Corporate VIP"}</span>
+                          <span className="text-xs font-semibold tracking-wider text-neutral-500">Client: {p?.clientName || "Corporate VIP"}</span>
                         </div>
                       </td>
-                      <td className="py-4 px-6 text-[11px] text-neutral-400 font-sans">{inv.dueDate}</td>
+                      <td className="py-4 px-6 text-xs font-semibold text-neutral-400 font-sans">{inv.dueDate}</td>
                       <td className="py-4 px-6">
                         <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded border border-neutral-900 bg-neutral-950/40">
                           <span className={`w-1.5 h-1.5 rounded-full ${dotColor}`}></span>
                           <select
                             value={inv.status}
                             onChange={(e) => onUpdateInvoiceStatus(inv.id, e.target.value as any)}
-                            className={`bg-transparent border-0 text-[10px] uppercase font-bold tracking-wide font-mono focus:outline-none cursor-pointer transition-colors ${
+                            className={`bg-transparent border-0 text-xs font-semibold tracking-wider uppercase font-bold tracking-wide font-mono focus:outline-none cursor-pointer transition-colors ${
                               inv.status === "Paid" ? "text-emerald-400" :
                               inv.status === "Sent" ? "text-amber-400" :
                               inv.status === "Overdue" ? "text-rose-400" :
@@ -335,7 +335,7 @@ ${finalReportText}`;
               </div>
               
               <div className="space-y-1">
-                <div className="flex justify-between items-center text-[10px] text-neutral-400 flex-row">
+                <div className="flex justify-between items-center text-xs font-semibold tracking-wider text-neutral-400 flex-row">
                   <span>CASH FLOW RISK INDEX:</span>
                   <span className="text-rose-400 font-bold">78% (CRITICAL SHARD)</span>
                 </div>
@@ -344,10 +344,10 @@ ${finalReportText}`;
                 </div>
               </div>
 
-              <div className="text-neutral-300 leading-relaxed text-[11px] space-y-2">
+              <div className="text-neutral-300 leading-relaxed text-xs font-semibold space-y-2">
                 <div>
                   <span className="font-bold text-neutral-450 uppercase block text-[9px] tracking-wider mb-0.5">Bespoke Mitigation Strategy:</span>
-                  <p className="font-sans text-neutral-300 leading-relaxed text-[11px]">
+                  <p className="font-sans text-neutral-300 leading-relaxed text-xs font-semibold">
                     Initiate complete asset preview blocking inside the <strong className="text-neutral-100">Asset Escrow Layer</strong>. Refuse original vector releases for overdue accounts totaling <strong className="text-white">${totalOverdueAmount.toLocaleString()} USD</strong> until outstanding ledger reconciles.
                   </p>
                 </div>
@@ -368,7 +368,7 @@ ${finalReportText}`;
               <button 
                 onClick={triggerCfoAudit}
                 disabled={analyzingLedger}
-                className="bg-neutral-900 hover:bg-neutral-800 text-neutral-200 border border-neutral-800 text-[10px] font-mono px-3 py-1 rounded transition-all flex items-center gap-1"
+                className="bg-neutral-900 hover:bg-neutral-800 text-neutral-200 border border-neutral-800 text-base font-semibold min-h-[44px] font-semibold tracking-wider font-mono px-3 py-1 rounded transition-all flex items-center gap-1"
               >
                 <Zap className={`w-3.5 h-3.5 text-amber-400 ${analyzingLedger ? "animate-spin" : ""}`} />
                 <span>{analyzingLedger ? "COMPRESSING MARGIN RECON..." : "GENERATE ADVISORY"}</span>
@@ -388,7 +388,7 @@ ${finalReportText}`;
           </div>
 
           <div className="bg-neutral-950 border border-neutral-900 rounded-lg p-5 text-xs font-mono space-y-3 text-neutral-400">
-            <span className="text-[10px] text-neutral-500 uppercase block tracking-widest font-semibold flex items-center gap-1">
+            <span className="text-xs font-semibold tracking-wider text-neutral-500 uppercase block tracking-widest font-semibold flex items-center gap-1">
               <Video className="w-3.5 h-3.5" />
               <span>Production Invoicing Hooks</span>
             </span>
@@ -416,11 +416,11 @@ ${finalReportText}`;
 
             <form onSubmit={handleAddInvoiceSubmit} className="space-y-4 text-xs font-mono">
               <div className="space-y-1">
-                <label className="text-[10px] text-neutral-500 block uppercase font-semibold">LINKED PRODUCTION PROJECT</label>
+                <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase font-semibold">LINKED PRODUCTION PROJECT</label>
                 <select 
                   value={newInvoice.projectId}
                   onChange={(e) => setNewInvoice({ ...newInvoice, projectId: e.target.value })}
-                  className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none focus:border-neutral-600 font-mono"
+                  className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600 font-mono"
                 >
                   {projects.map(p => (
                     <option key={p.id} value={p.id}>{p.name} ({p.clientName})</option>
@@ -430,35 +430,35 @@ ${finalReportText}`;
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <label className="text-[10px] text-neutral-500 block uppercase">INVOICE VALUE ($)</label>
+                  <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase">INVOICE VALUE ($)</label>
                   <input 
                     type="number" 
                     required
                     value={newInvoice.amount}
                     onChange={(e) => setNewInvoice({ ...newInvoice, amount: Number(e.target.value) })}
                     placeholder="e.g. 15000"
-                    className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none"
+                    className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none"
                   />
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[10px] text-neutral-500 block uppercase font-semibold">DUE DATE</label>
+                  <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase font-semibold">DUE DATE</label>
                   <input 
                     type="date" 
                     required
                     value={newInvoice.dueDate}
                     onChange={(e) => setNewInvoice({ ...newInvoice, dueDate: e.target.value })}
-                    className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none focus:border-neutral-600"
+                    className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-600"
                   />
                 </div>
               </div>
 
               <div className="space-y-1">
-                <label className="text-[10px] text-neutral-500 block uppercase">CLEARING STATUS</label>
+                <label className="text-sm font-semibold tracking-wider text-neutral-500 block uppercase">CLEARING STATUS</label>
                 <select 
                   value={newInvoice.status}
                   onChange={(e) => setNewInvoice({ ...newInvoice, status: e.target.value as FinancialInvoice["status"] })}
-                  className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none"
+                  className="w-full bg-neutral-905 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none"
                 >
                   <option value="Draft">Draft (Internal preparation)</option>
                   <option value="Sent">Sent (Client Outstanding)</option>
@@ -477,7 +477,7 @@ ${finalReportText}`;
                 </button>
                 <button
                   type="submit"
-                  className="bg-white text-black hover:bg-neutral-200 px-4 py-2 rounded font-semibold"
+                  className="bg-white text-black hover:bg-neutral-200 px-5 py-3 min-h-[44px] rounded font-semibold"
                 >
                   DISPATCH INVOICE
                 </button>

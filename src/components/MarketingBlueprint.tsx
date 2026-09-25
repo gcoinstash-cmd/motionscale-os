@@ -104,7 +104,7 @@ Custom server orchestration & pipeline asset sync hooks: **$${pricingVars.custom
             <button
               key={sec}
               onClick={() => setSelectedSandboxSection(sec)}
-              className={`px-3 py-1 rounded text-[11px] font-medium transition-all duration-150 ${selectedSandboxSection === sec ? "bg-white text-black font-semibold" : "text-neutral-400 hover:text-white"}`}
+              className={`px-3 py-1 rounded text-xs font-semibold font-medium transition-all duration-150 ${selectedSandboxSection === sec ? "bg-white text-black font-semibold" : "text-neutral-400 hover:text-white"}`}
             >
               {sec === "roi" ? "ROI VALUE CALCULATOR" : sec === "ai" ? "AUTOMATED AI BRIEF" : "API PLAYGROUND"}
             </button>
@@ -133,7 +133,7 @@ Custom server orchestration & pipeline asset sync hooks: **$${pricingVars.custom
               <div className="space-y-5 bg-neutral-900/20 border border-neutral-900/60 p-5 rounded-lg font-mono text-xs">
                 {/* Developer rate slider */}
                 <div className="space-y-2">
-                  <div className="flex justify-between items-center text-[11px]">
+                  <div className="flex justify-between items-center text-xs font-semibold">
                     <span className="text-neutral-300">ESTIMATED CREATIVE SENIOR HOURLY RATE:</span>
                     <span className="text-white font-bold">${pricingVars.developerRate}/hr</span>
                   </div>
@@ -150,7 +150,7 @@ Custom server orchestration & pipeline asset sync hooks: **$${pricingVars.custom
 
                 {/* Hours saved slider */}
                 <div className="space-y-2">
-                  <div className="flex justify-between items-center text-[11px]">
+                  <div className="flex justify-between items-center text-xs font-semibold">
                     <span className="text-neutral-300">ADMINISTRATIVE HOURS SAVED WEEKLY:</span>
                     <span className="text-amber-400 font-bold">{weeklyHoursSaved} Hours / week</span>
                   </div>
@@ -167,7 +167,7 @@ Custom server orchestration & pipeline asset sync hooks: **$${pricingVars.custom
 
                 {/* Gumroad price slider */}
                 <div className="space-y-2">
-                  <div className="flex justify-between items-center text-[11px]">
+                  <div className="flex justify-between items-center text-xs font-semibold">
                     <span className="text-neutral-300">MOTIONSCALE OS BASE PURCHASE (GUMROAD):</span>
                     <span className="text-white font-bold">${pricingVars.gumroadPrice} USD</span>
                   </div>
@@ -186,7 +186,7 @@ Custom server orchestration & pipeline asset sync hooks: **$${pricingVars.custom
               {/* Connected relations explanation */}
               <div className="border-t border-neutral-900 pt-5 text-xs text-neutral-400 space-y-3 leading-relaxed">
                 <h4 className="font-sans font-medium text-white">How MotionScale OS justifies the price out-of-the-box:</h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[11px] font-mono">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-semibold font-mono">
                   <div className="bg-neutral-900/40 border border-neutral-900 p-3 rounded">
                     <span className="text-white block font-medium">I. Consolidate Assets & Renders</span>
                     <span>Replaces frame.io, Dropbox, and independent ledger software saving over $${alternativeRenderingOverheadCostYear.toLocaleString()}/yr.</span>
@@ -209,28 +209,28 @@ Custom server orchestration & pipeline asset sync hooks: **$${pricingVars.custom
               <div className="space-y-4 font-mono text-xs">
                 {/* Year savings metric */}
                 <div className="p-4 bg-emerald-950/20 border border-emerald-900/60 rounded-lg text-left animate-pulse-subtle">
-                  <span className="text-[10px] text-emerald-400 block uppercase tracking-widest">Compounded Annual Return (ROI Value)</span>
+                  <span className="text-xs font-semibold tracking-wider text-emerald-400 block uppercase tracking-widest">Compounded Annual Return (ROI Value)</span>
                   <span className="text-2xl text-emerald-300 font-bold block mt-1.5">${totalAnnualValueSaved.toLocaleString()} USD</span>
-                  <p className="text-[10px] text-neutral-400 mt-2">
+                  <p className="text-xs font-semibold tracking-wider text-neutral-400 mt-2">
                     Value derived from saving **{weeklyHoursSaved * 52} technical hours** annually, plus legacy rendering software overhead.
                   </p>
                 </div>
 
                 {/* ROI multiplier */}
                 <div className="p-4 bg-neutral-900/40 border border-neutral-800 rounded-lg text-left">
-                  <span className="text-[10px] text-[#a3a3a3] block uppercase tracking-widest">Base License Value multiplier</span>
+                  <span className="text-xs font-semibold tracking-wider text-[#a3a3a3] block uppercase tracking-widest">Base License Value multiplier</span>
                   <span className="text-xl text-white font-bold block mt-1">{standardRoiMultiplier.toFixed(1)}x return</span>
-                  <p className="text-[10px] text-neutral-500 mt-1.5">
+                  <p className="text-xs font-semibold tracking-wider text-neutral-500 mt-1.5">
                     For every $1 invested, MotionScale OS returns **${standardRoiMultiplier.toFixed(1)}** back in pure operational efficiency.
                   </p>
                 </div>
 
                 <div className="border-t border-neutral-900 pt-5 space-y-3.5">
-                  <span className="text-[10px] text-neutral-500 uppercase block tracking-widest flex items-center gap-1.5">
+                  <span className="text-xs font-semibold tracking-wider text-neutral-500 uppercase block tracking-widest flex items-center gap-1.5">
                     <Fingerprint className="w-3.5 h-3.5 text-neutral-400" />
                     <span>The Custom Pitch Vector</span>
                   </span>
-                  <p className="text-[11px] text-neutral-400 leading-relaxed">
+                  <p className="text-xs font-semibold text-neutral-400 leading-relaxed">
                     "Secure absolute ownership of your asset libraries. Deploy MotionScale OS, protect your renders, and maintain immediate financial control limits."
                   </p>
                 </div>
@@ -255,7 +255,7 @@ Custom server orchestration & pipeline asset sync hooks: **$${pricingVars.custom
                   <span className="text-neutral-500 select-none text-sm font-semibold">{i + 1}.</span>
                   <div className="space-y-1">
                     <span className="text-white block font-medium font-mono">{mod.name}</span>
-                    <p className="text-neutral-400 font-sans leading-relaxed text-[11px]">{mod.desc}</p>
+                    <p className="text-neutral-400 font-sans leading-relaxed text-xs font-semibold">{mod.desc}</p>
                   </div>
                 </div>
               ))}
@@ -281,45 +281,45 @@ Custom server orchestration & pipeline asset sync hooks: **$${pricingVars.custom
             
             {/* Input fields */}
             <div className="lg:col-span-5 bg-neutral-950 border border-neutral-900 rounded-lg p-5 space-y-4 text-xs font-mono">
-              <span className="text-[10px] text-neutral-500 block uppercase font-semibold">AI COMPILATION INPUTS</span>
+              <span className="text-xs font-semibold tracking-wider text-neutral-500 block uppercase font-semibold">AI COMPILATION INPUTS</span>
               
               <div className="space-y-1">
-                <label className="text-[10px] text-neutral-400 block uppercase">PROJECT TITLE</label>
+                <label className="text-sm font-semibold tracking-wider text-neutral-400 block uppercase">PROJECT TITLE</label>
                 <input 
                   type="text"
                   value={briefInput.projectName}
                   onChange={(e) => setBriefInput({ ...briefInput, projectName: e.target.value })}
-                  className="w-full bg-neutral-900 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none focus:border-neutral-700"
+                  className="w-full bg-neutral-900 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none focus:border-neutral-700"
                 />
               </div>
 
               <div className="space-y-1">
-                <label className="text-[10px] text-neutral-400 block uppercase">CLIENT ENTITY</label>
+                <label className="text-sm font-semibold tracking-wider text-neutral-400 block uppercase">CLIENT ENTITY</label>
                 <input 
                   type="text"
                   value={briefInput.clientName}
                   onChange={(e) => setBriefInput({ ...briefInput, clientName: e.target.value })}
-                  className="w-full bg-neutral-900 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none"
+                  className="w-full bg-neutral-900 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none"
                 />
               </div>
 
               <div className="space-y-1">
-                <label className="text-[10px] text-neutral-400 block uppercase">SYSTEM PIPELINE COMPONENTS</label>
+                <label className="text-sm font-semibold tracking-wider text-neutral-400 block uppercase">SYSTEM PIPELINE COMPONENTS</label>
                 <input 
                   type="text"
                   value={briefInput.techStack}
                   onChange={(e) => setBriefInput({ ...briefInput, techStack: e.target.value })}
-                  className="w-full bg-neutral-900 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none"
+                  className="w-full bg-neutral-900 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none"
                 />
               </div>
 
               <div className="space-y-1">
-                <label className="text-[10px] text-neutral-400 block uppercase">CAMPAIGN OBJECTIVES</label>
+                <label className="text-sm font-semibold tracking-wider text-neutral-400 block uppercase">CAMPAIGN OBJECTIVES</label>
                 <textarea 
                   rows={3}
                   value={briefInput.objectives}
                   onChange={(e) => setBriefInput({ ...briefInput, objectives: e.target.value })}
-                  className="w-full bg-neutral-900 border border-neutral-800 rounded p-2 text-[11px] text-white focus:outline-none"
+                  className="w-full bg-neutral-900 border border-neutral-800 rounded p-2 text-xs font-semibold text-white focus:outline-none"
                 />
               </div>
 
@@ -328,7 +328,7 @@ Custom server orchestration & pipeline asset sync hooks: **$${pricingVars.custom
                   type="button"
                   onClick={compileProjectBrief}
                   disabled={draftingBrief}
-                  className="w-full bg-white hover:bg-neutral-200 text-black text-xs font-mono py-2.5 rounded font-bold transition-all duration-200 flex items-center justify-center gap-1.5"
+                  className="w-full bg-white hover:bg-neutral-200 text-black text-base font-semibold min-h-[44px] font-mono py-2.5 rounded font-bold transition-all duration-200 flex items-center justify-center gap-1.5"
                 >
                   <Cpu className={`w-3.5 h-3.5 ${draftingBrief ? "animate-spin" : ""}`} />
                   <span>{draftingBrief ? "COMPILING SYSTEM SPEC..." : "COMPILE PROJECT BRiEF SPEC"}</span>
@@ -343,7 +343,7 @@ Custom server orchestration & pipeline asset sync hooks: **$${pricingVars.custom
                   <FileText className="w-4 h-4 text-neutral-400" />
                   <span className="text-xs font-mono text-white uppercase font-bold">Generated Markdown Document</span>
                 </div>
-                <span className="text-[10px] font-mono bg-neutral-900 text-amber-400 border border-neutral-800 px-2 py-0.5 rounded uppercase">
+                <span className="text-xs font-semibold tracking-wider font-mono bg-neutral-900 text-amber-400 border border-neutral-800 px-2 py-0.5 rounded uppercase">
                   Gemini Flash 3.5
                 </span>
               </div>
@@ -422,15 +422,15 @@ Custom server orchestration & pipeline asset sync hooks: **$${pricingVars.custom
                   <span className="bg-emerald-950/40 text-emerald-400 border border-emerald-900 px-2.5 py-0.5 rounded font-mono font-bold">POST</span>
                   <span className="text-white font-mono font-semibold">/api/gemini/score-lead</span>
                 </div>
-                <span className="text-[10px] text-neutral-500 font-mono">SECURE RISKS ENGINE</span>
+                <span className="text-xs font-semibold tracking-wider text-neutral-500 font-mono">SECURE RISKS ENGINE</span>
               </div>
-              <p className="font-sans text-neutral-400 leading-relaxed text-[11px]">
+              <p className="font-sans text-neutral-400 leading-relaxed text-xs font-semibold">
                 Appraises a new client platform and MFA layer, updating logs and calculating security risks using artificial neural estimators.
               </p>
               
               <div className="bg-neutral-900/40 border border-neutral-900 p-4 rounded text-left">
-                <span className="text-[10px] text-neutral-500 font-mono block mb-2 font-bold uppercase">Sample Parameters</span>
-                <pre className="text-neutral-305 font-mono text-[10px] overflow-x-auto">
+                <span className="text-xs font-semibold tracking-wider text-neutral-500 font-mono block mb-2 font-bold uppercase">Sample Parameters</span>
+                <pre className="text-neutral-305 font-mono text-xs font-semibold tracking-wider overflow-x-auto">
 {`{
   "name": "Secured Vault Room",
   "company": "Sterling Luxury Estates",
@@ -450,15 +450,15 @@ Custom server orchestration & pipeline asset sync hooks: **$${pricingVars.custom
                   <span className="bg-emerald-950/40 text-emerald-400 border border-emerald-900 px-2.5 py-0.5 rounded font-mono font-bold text-xs">POST</span>
                   <span className="text-white font-mono font-semibold">/api/gemini/generate-brief</span>
                 </div>
-                <span className="text-[10px] text-neutral-500 font-mono">SPECIFICATION GENERATOR</span>
+                <span className="text-xs font-semibold tracking-wider text-neutral-500 font-mono">SPECIFICATION GENERATOR</span>
               </div>
-              <p className="font-sans text-neutral-400 leading-relaxed text-[11px]">
+              <p className="font-sans text-neutral-400 leading-relaxed text-xs font-semibold">
                 Compiles fully formatted project brief summaries for target rendering layouts using server-proxied GenAI calls.
               </p>
               
               <div className="bg-neutral-900/40 border border-neutral-900 p-4 rounded text-left font-mono">
-                <span className="text-[10px] text-neutral-500 block mb-2 font-bold uppercase">Success JSON response structure</span>
-                <pre className="text-neutral-300 text-[10px] overflow-x-auto">
+                <span className="text-xs font-semibold tracking-wider text-neutral-500 block mb-2 font-bold uppercase">Success JSON response structure</span>
+                <pre className="text-neutral-300 text-xs font-semibold tracking-wider overflow-x-auto">
 {`{
   "brief": "# ENTERPRISE SPECIFICATION BRIEF\\n**Prepared for**: Sterling estates...",
   "simulated": false
